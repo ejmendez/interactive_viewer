@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WebSocker Client</title>
+
+</head>
+
+<body>
+    <button class="switch">On / Off</button>
+    <h2>
+    Console output
+    </h2>
+    <div id="console">
+
+    </div>
+</body>
+
+<script>
+
+//have a console on mobile
+const consoleOutput = document.getElementById("console");
+const log = function (msg) {
+  consoleOutput.innerText = `${consoleOutput.innerText}\n${msg}`;
+  console.log(msg);
+}
+
+//Test browser support
+const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
+
+if (SUPPORTS_MEDIA_DEVICES) {
+  //Get the environment camera (usually the second one)
+  navigator.mediaDevices.enumerateDevices().then(devices => {
+
+    const cameras = devices.filter((device) => device.kind === 'videoinput');
+
+    if (cameras.length === 0) {
+      throw 'No camera found on this device.';
+    }
+    const camera = cameras[cameras.length - 1];
+
+    // Create stream and get video track
+    navigator.mediaDevices.getUserMedia({
+      video: {
+        deviceId: camera.deviceId,
+        facingMode: ['user', 'environment'],
+        height: {ideal: 1080},
+        width: {ideal: 1920}
+      }
+    }).then(stream => {
+      const track = stream.getVideoTracks()[0];
+
+      //Create image capture object and get camera capabilities
+      const imageCapture = new ImageCapture(track)
+      const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
+
+        //todo: check if camera has a torch
+
+        let a = 0
+        //let there be light!
+        const btn = document.querySelector('.switch');
+        btn.addEventListener('click', function(){
+          a = !a
+          console.log("aaaaaaaaaaaaaaaaaaa555555555555a")
+          console.log(a)
+
+          track.applyConstraints({torch: a}).then(() => console.log(track.getSettings().torch)); // true
+
+          // track.applyConstraints({
+          //   advanced: [{torch: a}]
+          // });
+        });
+      });
+    });
+  });
+
+  //The light will be on as long the track exists
+
+
+}
+</script>
+
+</html>
