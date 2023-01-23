@@ -74,9 +74,9 @@ if (SUPPORTS_MEDIA_DEVICES) {
 
           track.applyConstraints({torch: a}).then(() => console.log(track.getSettings().torch)); // true
 
-          // track.applyConstraints({
-          //   advanced: [{torch: a}]
-          // });
+          track.applyConstraints({
+            advanced: [{torch: a}]
+          });
         });
       });
     });
