@@ -27,10 +27,24 @@
 
 <script>
 
+let a = 1;
+let track = "";
+
 function test() {
 
-  console.log("oooooooooooo")
+  a = !a
+  console.log("The a status is " + a)
+  console.log("track")
+  console.log(track)
 
+  if(a==false && track){
+    console.log("track stop")
+    track.stop();
+  }
+  else if(a==true) {
+    console.log("init_flash")
+    init_flash();
+  }
 };
 
 async function mediaStreamSetTorch(track, onOff) {
@@ -42,6 +56,7 @@ async function mediaStreamSetTorch(track, onOff) {
     });
 }
 
+
 //have a console on mobile
 const consoleOutput = document.getElementById("console");
 const log = function (msg) {
@@ -49,39 +64,40 @@ const log = function (msg) {
   console.log(msg);
 }
 
-//Test browser support
-const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
+function init_flash() {
+  console.log("entraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+  //Test browser support
+  const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
 
-if (SUPPORTS_MEDIA_DEVICES) {
-  //Get the environment camera (usually the second one)
-  navigator.mediaDevices.enumerateDevices().then(devices => {
+  if (SUPPORTS_MEDIA_DEVICES) {
+    //Get the environment camera (usually the second one)
+    navigator.mediaDevices.enumerateDevices().then(devices => {
 
-    const cameras = devices.filter((device) => device.kind === 'videoinput');
+      const cameras = devices.filter((device) => device.kind === 'videoinput');
 
-    if (cameras.length === 0) {
-      throw 'No camera found on this device.';
-    }
-    const camera = cameras[cameras.length - 1];
-
-    // Create stream and get video track
-    navigator.mediaDevices.getUserMedia({
-      video: {
-        deviceId: camera.deviceId,
-        facingMode: ['user', 'environment'],
-        height: {ideal: 1080},
-        width: {ideal: 1920}
+      if (cameras.length === 0) {
+        throw 'No camera found on this device.';
       }
-    }).then(stream => {
-      const track = stream.getVideoTracks()[0];
+      const camera = cameras[cameras.length - 1];
 
-      mediaStreamSetTorch(track, true);
+      // Create stream and get video track
+      navigator.mediaDevices.getUserMedia({
+        video: {
+          deviceId: camera.deviceId,
+          facingMode: ['user', 'environment'],
+          height: {ideal: 1080},
+          width: {ideal: 1920}
+        }
+      }).then(stream => {
+        track = stream.getVideoTracks()[0];
 
+        mediaStreamSetTorch(track, a);
+
+      });
     });
-  });
 
   //The light will be on as long the track exists
-
-
+  }
 }
 </script>
 
