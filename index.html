@@ -27,7 +27,7 @@
 
 <script>
 
-let a = 1;
+let a = 0;
 let track = "";
 
 function test() {
@@ -65,7 +65,6 @@ const log = function (msg) {
 }
 
 function init_flash() {
-  console.log("entraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
   //Test browser support
   const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
 
@@ -90,9 +89,7 @@ function init_flash() {
         }
       }).then(stream => {
         track = stream.getVideoTracks()[0];
-
         mediaStreamSetTorch(track, a);
-
       });
     });
 
