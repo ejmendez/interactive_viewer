@@ -15,103 +15,123 @@
 </head>
 
 <body>
-    <button onclick="test()">Click Here</button>
-    <button class="switch">On / Off</button>
-    <h2>
-    Console output
-    </h2>
-    <div id="console">
-
-    </div>
+      <button onclick="enableSong()">Click Here</button>
 </body>
 
 <script>
 
-let a = 0;
-let track = "";
 
-function test() {
+    let light = false
 
-  a = !a
+    let song_in_progress = -1;
 
+    const socket = new WebSocket('ws://192.168.100.11:8080');
 
-  console.log("torch " + a)
-  const constraints = {
-          advanced: [{
-            torch:a,
-          }]
-        };
+    function enableSong() {
+        song_in_progress = 0
+    };
 
-  track.applyConstraints(constraints)
-  .then(() => {
-    console.log("exito")
-    // Do something with the track such as using the Image Capture API.
-  })
+    function songFinishes() {
+        song_in_progress = 0
+    };
 
-};
+    function turnLight(mode) {
 
-async function mediaStreamSetTorch(track, onOff) {
-    await track.applyConstraints({
-        advanced: [{
-            fillLightMode: onOff ? 'flash' : 'off',
-            torch: onOff ? true : false,
-        }],
-    });
-}
-
-
-//have a console on mobile
-const consoleOutput = document.getElementById("console");
-const log = function (msg) {
-  consoleOutput.innerText = `${consoleOutput.innerText}\n${msg}`;
-  console.log(msg);
-}
-
-//Test browser support
-const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
-
-if (SUPPORTS_MEDIA_DEVICES) {
-  //Get the environment camera (usually the second one)
-  navigator.mediaDevices.enumerateDevices().then(devices => {
-
-    const cameras = devices.filter((device) => device.kind === 'videoinput');
-
-    if (cameras.length === 0) {
-      throw 'No camera found on this device.';
-    }
-    const camera = cameras[cameras.length - 1];
-
-    // Create stream and get video track
-    navigator.mediaDevices.getUserMedia({
-      video: {
-        deviceId: camera.deviceId,
-        facingMode: ['user', 'environment'],
-        height: {ideal: 1080},
-        width: {ideal: 1920}
-      }
-    }).then(stream => {
-      track = stream.getVideoTracks()[0];
-        let torchStatus = !track.getSettings().torch;
-
-        console.log("torchStatus " + torchStatus)
-
+        console.log("Turning " + mode + " light")
         const constraints = {
-          advanced: [{
-            torch:a,
-          }]
+            advanced: [{
+                torch:mode,
+            }]
         };
 
         track.applyConstraints(constraints)
-        .then(() => {
-          console.log("exito")
-          // Do something with the track such as using the Image Capture API.
+            .then(() => {
+            console.log("Successful action with the light")
         })
-        //mediaStreamSetTorch(track, a);
-    });
-  });
+    }
 
-//The light will be on as long the track exists
-}
+    socket.addEventListener('open', function (event) {
+        socket.send('Connection Established');
+            document.body.style.backgroundColor = "#ff0000";
+            return false;
+    });
+
+    socket.addEventListener('message', function (event) {
+        //console.log(event.data);
+        console.log("light " + light);
+
+        let rgb_array = event.data.split(",")
+
+        document.body.style.backgroundColor = "rgb" + "(" + rgb_array[0] + ", " + rgb_array[1] + ", " + rgb_array[2] + ")";
+
+        let play_audio = 0
+        let src        = ""
+
+        if (song_in_progress == 0) {
+            if (rgb_array[0] > 100) {
+                src        = 'https://drive.google.com/uc?export=view&id=14zo4q1ffJiWerIu6Nhm7N9To1p552ieu';
+                play_audio = 1
+            }
+            else if (rgb_array[0] > 50) {
+                src        = 'https://drive.google.com/uc?export=view&id=155Hh49l3gYjIodUjqhTHDoy4Hm6XF_vR';
+                play_audio = 1
+            }
+
+            if (play_audio == 1) {
+                song_in_progress = 1
+
+                let audio = new Audio(src);
+                audio.addEventListener("ended", songFinishes);
+                audio.play();
+            }
+        }
+
+        if (rgb_array[0] >= 200 && light == false) {
+            turnLight(true)
+            light = true
+        }
+        else if (rgb_array[0] < 200 && light == true) {
+            turnLight(false)
+            light = false
+        }
+    });
+
+    const contactServer = () => {
+        socket.send("Initialize");
+    }
+
+    function enableCameraLight() {
+        //Test browser support
+        const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
+
+        if (SUPPORTS_MEDIA_DEVICES) {
+          //Get the environment camera (usually the second one)
+          navigator.mediaDevices.enumerateDevices().then(devices => {
+
+            const cameras = devices.filter((device) => device.kind === 'videoinput');
+
+            if (cameras.length === 0) {
+              throw 'No camera found on this device.';
+            }
+            const camera = cameras[cameras.length - 1];
+
+            // Create stream and get video track
+            navigator.mediaDevices.getUserMedia({
+              video: {
+                deviceId: camera.deviceId,
+                facingMode: ['user', 'environment'],
+                height: {ideal: 1080},
+                width: {ideal: 1920}
+              }
+            }).then(stream => {
+              track = stream.getVideoTracks()[0];
+            });
+          });
+          //The light will be on as long the track exists
+        }
+    }
+
+    enableCameraLight()
 
 </script>
 
