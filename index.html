@@ -16,6 +16,7 @@
 
 <body>
     <button onclick="switchLight()">On / Off</button>
+    <button onclick="vibrate()">Vibration On / Off</button>
     <h2>
     Console output
     </h2>
@@ -27,6 +28,20 @@
 
 let mode = false;
 let track = "";
+
+let canVibrate = false;
+if('vibrate' in navigator) {
+  canVibrate = true;
+}
+
+
+function vibrate() {
+  console.log("Vibration "+ canVibrate)
+  if (canVibrate) {
+    navigator.vibrate(500);
+  }
+  //navigator.vibrate(0)
+}
 
 function switchLight() {
   mode = !mode
