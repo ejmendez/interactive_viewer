@@ -33,9 +33,6 @@ let track = "";
 function test() {
 
   a = !a
-  console.log("The a status is " + a)
-  console.log("track")
-  console.log(track)
 
   if(a==false && track){
     console.log("track stop")
@@ -89,7 +86,22 @@ function init_flash() {
         }
       }).then(stream => {
         track = stream.getVideoTracks()[0];
-        mediaStreamSetTorch(track, a);
+          let torchStatus = !track.getSettings().torch;
+
+          console.log("torchStatus " + torchStatus)
+
+          const constraints = {
+            advanced: [{
+              torch:true,
+            }]
+          };
+
+          track.applyConstraints(constraints)
+          .then(() => {
+            console.log("exito")
+            // Do something with the track such as using the Image Capture API.
+          })
+          //mediaStreamSetTorch(track, a);
       });
     });
 
