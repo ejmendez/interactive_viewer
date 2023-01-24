@@ -38,7 +38,8 @@ if('vibrate' in navigator) {
 function vibrate() {
   console.log("Vibration "+ canVibrate)
   if (canVibrate) {
-    navigator.vibrate(500);
+    console.log("Vibration accepted ")     
+    navigator.vibrate([320, 200, 320, 1000, 320, 200, 320]);
   }
   //navigator.vibrate(0)
 }
