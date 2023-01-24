@@ -26,6 +26,15 @@
 
 <script>
 
+async function mediaStreamSetTorch(track, onOff) {
+    await track.applyConstraints({
+        advanced: [{
+            fillLightMode: onOff ? 'flash' : 'off',
+            torch: onOff ? true : false,
+        }],
+    });
+}
+
 //have a console on mobile
 const consoleOutput = document.getElementById("console");
 const log = function (msg) {
@@ -68,12 +77,22 @@ if (SUPPORTS_MEDIA_DEVICES) {
         //let there be light!
         const btn = document.querySelector('.switch');
         btn.addEventListener('click', function(){
+
           a = !a
           console.log("aaaaaaaaaaaaaaaaaaaa")
-          
-          track.applyConstraints({
-            advanced: [{torch: false}]
-          });
+          console.log(a)
+
+          let torchStatus = !track.getSettings().torch;
+
+          console.log(torchStatus)
+
+          if(a == false) {
+            console.log("falsoxxxxxxxxxxxxx")
+            track.stop();
+          }
+
+          mediaStreamSetTorch(track, a);
+
         });
       });
     });
