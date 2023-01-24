@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <button onclick="test()">Click Here</button>
     <button class="switch">On / Off</button>
     <h2>
     Console output
@@ -25,6 +26,12 @@
 </body>
 
 <script>
+
+function test() {
+
+  console.log("oooooooooooo")
+
+};
 
 async function mediaStreamSetTorch(track, onOff) {
     await track.applyConstraints({
@@ -67,34 +74,8 @@ if (SUPPORTS_MEDIA_DEVICES) {
     }).then(stream => {
       const track = stream.getVideoTracks()[0];
 
-      //Create image capture object and get camera capabilities
-      const imageCapture = new ImageCapture(track)
-      const photoCapabilities = imageCapture.getPhotoCapabilities().then(() => {
+      mediaStreamSetTorch(track, true);
 
-        //todo: check if camera has a torch
-
-        let a = 0
-        //let there be light!
-        const btn = document.querySelector('.switch');
-        btn.addEventListener('click', function(){
-
-          a = !a
-          console.log("aaaaaaaaaaaaaaaaaaaa")
-          console.log(a)
-
-          let torchStatus = !track.getSettings().torch;
-
-          console.log(torchStatus)
-
-          if(a == false) {
-            console.log("falsoxxxxxxxxxxxxx")
-            track.stop();
-          }
-
-          mediaStreamSetTorch(track, a);
-
-        });
-      });
     });
   });
 
