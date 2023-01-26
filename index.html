@@ -15,62 +15,110 @@
 </head>
 
 <body>
-    <button onclick="switchLight()">On / Off</button>
-    <button onclick="vibrate()">Vibration On / Off</button>
-    <h2>
-    Console output
-    </h2>
-    <div id="console">
-    </div>
+      <button onclick="enableSong()">Click Here</button>
 </body>
 
 <script>
 
-let mode = false;
-let track = "";
+    //Probarlo
+    //Vibracion
+    //Poner websocket en la red
+    //Como poner un client en la red
+    //Dividir imagenes, rompecabezas
+    //Poner user name
+    //Hacer prueba con muchos users
+    //Imagenes
+    //Videos
+    //Encuentas
+    //Colores random
 
-let canVibrate = false;
-if('vibrate' in navigator) {
-  canVibrate = true;
-}
+    let light = false
 
+    let song_in_progress = -1;
 
-function vibrate() {
-  console.log("Vibration "+ canVibrate)
-  if (canVibrate) {
-    console.log("Vibration accepted ")     
-    navigator.vibrate([320, 200, 320, 1000, 320, 200, 320]);
-  }
-  //navigator.vibrate(0)
-}
+    let track = "";
 
-function switchLight() {
-  mode = !mode
+    // const serverAddress = "ws://127.0.0.1:5000";
 
-  if(track) {
+    //const socket = new WebSocket('ws://192.168.100.11:8080');
+    const socket = new WebSocket('wss://interactiveviewer.glitch.me/?user-agent=Mozilla');
 
-    const constraints = {
-            advanced: [{
-              torch:mode,
-            }]
-          };
+    function enableSong() {
+        song_in_progress = 0
+    };
 
-    track.applyConstraints(constraints)
-    .then(() => {
-      console.log("successful")
-      // Do something with the track such as using the Image Capture API.
-    })
-  }
-};
+    function songFinishes() {
+        song_in_progress = 0
+    };
 
-  //have a console on mobile
-  const consoleOutput = document.getElementById("console");
-  const log = function (msg) {
-    consoleOutput.innerText = `${consoleOutput.innerText}\n${msg}`;
-    console.log(msg);
-  }
+    function turnLight(mode) {
 
-  function enableCameraLight() {
+        if(track) {
+            console.log("Turning " + mode + " light")
+            const constraints = {
+                advanced: [{
+                    torch:mode,
+                }]
+            };
+
+            track.applyConstraints(constraints)
+                .then(() => {
+                console.log("Successful action with the light")
+            })
+        }
+    }
+
+    socket.addEventListener('open', function (event) {
+        socket.send('Connection Established');
+            document.body.style.backgroundColor = "#ff0000";
+            return false;
+    });
+
+    socket.addEventListener('message', function (event) {
+        //console.log(event.data);
+        //console.log("light " + light);
+
+        let rgb_array = event.data.split(",")
+
+        document.body.style.backgroundColor = "rgb" + "(" + rgb_array[0] + ", " + rgb_array[1] + ", " + rgb_array[2] + ")";
+
+        let play_audio = 0
+        let src        = ""
+
+        if (song_in_progress == 0) {
+            if (rgb_array[0] > 100) {
+                src        = 'https://drive.google.com/uc?export=view&id=14zo4q1ffJiWerIu6Nhm7N9To1p552ieu';
+                play_audio = 1
+            }
+            else if (rgb_array[0] > 50) {
+                src        = 'https://drive.google.com/uc?export=view&id=155Hh49l3gYjIodUjqhTHDoy4Hm6XF_vR';
+                play_audio = 1
+            }
+
+            if (play_audio == 1) {
+                song_in_progress = 1
+
+                let audio = new Audio(src);
+                audio.addEventListener("ended", songFinishes);
+                audio.play();
+            }
+        }
+
+        if (rgb_array[0] >= 200 && light == false) {
+            turnLight(true)
+            light = true
+        }
+        else if (rgb_array[0] < 200 && light == true) {
+            turnLight(false)
+            light = false
+        }
+    });
+
+    const contactServer = () => {
+        socket.send("Initialize");
+    }
+
+    function enableCameraLight() {
         //Test browser support
         const SUPPORTS_MEDIA_DEVICES = 'mediaDevices' in navigator;
 
@@ -114,7 +162,28 @@ function switchLight() {
         }
     }
 
-  enableCameraLight()
+
+    const canWakeLock = () => 'wakeLock' in navigator;
+
+    let wakelock;
+
+    async function lockWakeState() {
+
+        console.log("Checking if screen can be locked")
+        if(!canWakeLock()) return;
+            try {
+                wakelock = await navigator.wakeLock.request();
+                wakelock.addEventListener('release', () => {
+                console.log('Screen Wake State Locked:', !wakelock.released);
+            });
+            console.log('Screen Wake State Locked:', !wakelock.released);
+        } catch(e) {
+            console.error('Failed to lock wake state with reason:', e.message);
+        }
+    }
+
+    enableCameraLight()
+    lockWakeState()
 
 </script>
 
