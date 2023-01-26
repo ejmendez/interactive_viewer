@@ -50,7 +50,7 @@
     function vibrate() {
       console.log("Vibration "+ canVibrate)
       if (canVibrate) {
-        navigator.vibrate(1500);
+        navigator.vibrate(300);
       }
       //navigator.vibrate(0)
     }
@@ -119,7 +119,7 @@
             }
         }
 
-        if (rgb_array[0] == 255) {
+        if (rgb_array[0] == 248) {
             vibrate()
         }
 
