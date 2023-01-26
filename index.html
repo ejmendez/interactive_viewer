@@ -10,12 +10,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>WebSocker Client</title>
+    <title>Interactive viewer</title>
 
 </head>
 
 <body>
-      <button onclick="enableSong()">Click Here</button>
+      <button onclick="enableSong()">Start</button>
 </body>
 
 <script>
@@ -39,6 +39,21 @@
     let track = "";
 
     // const serverAddress = "ws://127.0.0.1:5000";
+
+
+    let canVibrate = false;
+    if('vibrate' in navigator) {
+      canVibrate = true;
+    }
+
+
+    function vibrate() {
+      console.log("Vibration "+ canVibrate)
+      if (canVibrate) {
+        navigator.vibrate(1500);
+      }
+      //navigator.vibrate(0)
+    }
 
     //const socket = new WebSocket('ws://192.168.100.11:8080');
     const socket = new WebSocket('wss://interactiveviewer.glitch.me/?user-agent=Mozilla');
@@ -86,11 +101,11 @@
         let src        = ""
 
         if (song_in_progress == 0) {
-            if (rgb_array[0] > 100) {
+            if (rgb_array[0] == 100) {
                 src        = 'https://drive.google.com/uc?export=view&id=14zo4q1ffJiWerIu6Nhm7N9To1p552ieu';
                 play_audio = 1
             }
-            else if (rgb_array[0] > 50) {
+            else if (rgb_array[0] == 50) {
                 src        = 'https://drive.google.com/uc?export=view&id=155Hh49l3gYjIodUjqhTHDoy4Hm6XF_vR';
                 play_audio = 1
             }
@@ -102,6 +117,10 @@
                 audio.addEventListener("ended", songFinishes);
                 audio.play();
             }
+        }
+
+        if (rgb_array[0] == 255) {
+            vibrate()
         }
 
         if (rgb_array[0] >= 200 && light == false) {
