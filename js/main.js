@@ -17,12 +17,88 @@ function vibrate() {
     }
 }
 
-//const socket = new WebSocket('ws://192.168.100.11:8080');
-const socket = new WebSocket('wss://interactiveviewer.glitch.me/?user-agent=Mozilla');
-
 const canWakeLock = () => 'wakeLock' in navigator;
 
 let wakelock;
+
+function connectWebSocket() {
+    const socket = new WebSocket('wss://interactiveviewer.glitch.me/?user-agent=Mozilla');
+
+    socket.onerror = function(error) {
+      alert(`[Error connecting to the host]`);
+    };
+
+    socket.addEventListener('open', function (event) {
+        console.log('Connection Established')
+        socket.send('Connection Established');
+        start_connected_page()
+        document.body.style.backgroundColor = "#ff0000";
+        return false;
+    });
+
+    socket.addEventListener('message', function (event) {
+
+        let rgbX_array = event.data.split(",")
+        let effect     = rgbX_array[3]
+
+        if (effect == 50) {
+            const red   = randomIntFromInterval(0, 255)
+            const green = randomIntFromInterval(0, 255)
+            const blue  = randomIntFromInterval(0, 255)
+
+            document.body.style.backgroundColor = "rgb" + "(" + red + ", " + green + ", " + blue + ")";
+        }
+        else if(effect != 51) {
+            document.body.style.backgroundColor = "rgb" + "(" + rgbX_array[0] + ", " + rgbX_array[1] + ", " + rgbX_array[2] + ")";
+        }
+
+        if (song_in_progress == 0) {
+
+            let play_audio = 0
+            let src        = ""
+
+            if (effect == 100) {
+                src        = 'music/birds.mp3';
+                play_audio = 1
+            }
+            else if (effect == 101) {
+                src        = 'music/grillo.mp3';
+                play_audio = 1
+            }
+
+            if (play_audio == 1) {
+                song_in_progress = 1
+
+                let audio = new Audio(src);
+                audio.addEventListener("ended", songFinishes);
+                audio.play();
+            }
+        }
+
+        if (effect == 10) {
+            vibrate()
+        }
+
+        if (effect == 255 && light == false) {
+            turnLight(true)
+            light = true
+        }
+        else if (effect == 0 && light == true) {
+            turnLight(false)
+            light = false
+        }
+    });
+
+    socket.onclose = function(event) {
+          if (event.wasClean) {
+            alert(`[close] Connection closed successfully, code=${event.code} reason=${event.reason}`);
+          } else {
+            // ej. El proceso del servidor se detuvo o la red está caída
+            // event.code es usualmente 1006 en este caso
+            alert('[close] The connection is lost');
+          }
+    };
+}
 
 async function lockWakeState() {
 
@@ -39,8 +115,37 @@ async function lockWakeState() {
     }
 }
 
-function songFinishes() {
+function start_connected_page() {
+
+    var elementos = document.getElementById("title");
+    elementos.style.display = "none";
+
+    var elementos = document.getElementById("start_button");
+    elementos.style.display = "none";
+
+    let connectionCircle = document.getElementById("connectionCircle");
+    connectionCircle.style.display = "inline";
+
+    connectionCircle.addEventListener("mouseover", function() {
+        let p = document.createElement("p");
+        p.innerHTML        = "Connection successful, please wait for host actions...";
+        p.style.color      = "white"
+        p.style.whiteSpace = "nowrap"
+        p.style.fontFamily = "Chivo"
+        connectionCircle.appendChild(p);
+    });
+
+
+    connectionCircle.addEventListener("mouseout", function() {
+        let p = document.querySelector("p");
+        p.remove();
+    });
+}
+
+function songFinishes(element) {
     song_in_progress = 0
+
+    connectWebSocket();
 };
 
 function turnLight(mode) {
@@ -106,68 +211,23 @@ function enableCameraLight() {
     }
 }
 
-socket.addEventListener('open', function (event) {
-    socket.send('Connection Established');
-        document.body.style.backgroundColor = "#ff0000";
-        return false;
-});
-
-socket.addEventListener('message', function (event) {
-
-    let rgbX_array = event.data.split(",")
-    let effect     = rgbX_array[3]
-
-    if (effect == 50) {
-        const red   = randomIntFromInterval(0, 255)
-        const green = randomIntFromInterval(0, 255)
-        const blue  = randomIntFromInterval(0, 255)
-
-        document.body.style.backgroundColor = "rgb" + "(" + red + ", " + green + ", " + blue + ")";
-    }
-    else if(effect != 51) {
-        document.body.style.backgroundColor = "rgb" + "(" + rgbX_array[0] + ", " + rgbX_array[1] + ", " + rgbX_array[2] + ")";
-    }
-
-
-    if (song_in_progress == 0) {
-
-        let play_audio = 0
-        let src        = ""
-
-        if (effect == 100) {
-            src        = 'music/birds.mp3';
-            play_audio = 1
-        }
-        else if (effect == 101) {
-            src        = 'music/grillo.mp3';
-            play_audio = 1
-        }
-
-        if (play_audio == 1) {
-            song_in_progress = 1
-
-            let audio = new Audio(src);
-            audio.addEventListener("ended", songFinishes);
-            audio.play();
-        }
-    }
-
-    if (effect == 10) {
-        vibrate()
-    }
-
-    if (effect == 255 && light == false) {
-        turnLight(true)
-        light = true
-    }
-    else if (effect == 0 && light == true) {
-        turnLight(false)
-        light = false
-    }
-});
-
 const contactServer = () => {
     socket.send("Initialize");
+}
+
+function ConfirmSubmit(sender) {
+    sender.disabled = true;
+    var displayValue = sender.style.
+    sender.style.display = 'none'
+
+    if (confirm('Seguro que desea entregar los paquetes?')) {
+        sender.disabled = false
+        return true;
+    }
+
+    sender.disabled = false;
+    sender.style.display = displayValue;
+    return false;
 }
 
 enableCameraLight()

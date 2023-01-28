@@ -12,10 +12,116 @@
 
     <title>Interactive viewer</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
+
+    <style>
+
+        body {
+            background: black;
+        }
+
+        .animated-title {
+
+            font-family   : 'Chivo', sans-serif;
+            text-align    : center;
+            letter-spacing: 0.1em;
+
+            text-align    : center;
+            font-size     : 100px;
+            font-weight   : bold;
+            margin-top    : 50px;
+            color         : white;
+            text-shadow   : 4px 4px 0px rgba(0,0,0,0.1);
+            animation     : animateTitle 2s ease-in-out infinite;
+            border-bottom : 4px solid blue;
+        }
+
+        @keyframes animateTitle {
+            0% {
+                transform: rotateY(-26deg);
+                 border-bottom-color: black;
+            }
+            50% {
+             border-bottom-color: yellow;
+            }
+
+            100% {
+                transform: rotateY(26deg);
+                  border-bottom-color: black;
+            }
+        }
+
+        /* Crea una clase para el botón */
+        .startButton {
+             font-family: 'Chivo', sans-serif;
+            background     : yellow; /* Crea un degradado */
+            border         : 2px solid #ff5500; /* Establece los bordes sólidos */
+            border-radius  : 10px; /* Establece los bordes redondeados */
+            color          : black; /* Establece el color del texto */
+            font-size      : 48px; /* Establece el tamaño de la fuente */
+            padding        : 10px 20px; /* Establece el espaciado interno */
+            text-align     : center; /* Centra el texto */
+            text-decoration: none; /* Quita la decoración debajo del texto */
+            transition     : all 0.3s ease; /* Añade una transición suave */
+            border-color   : black;
+            box-shadow     : 0px 0px 10px #ffffff;
+        }
+
+        /* Añade un efecto hover al botón */
+        .startButton:hover {
+            transform : scale(1.1);
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .container {
+            position : absolute;
+            top      : 50%;
+            left     : 50%;
+            transform: translate(-50%, -50%);
+            height   : auto;
+        }
+
+        .containerConnectionStatus {
+            display: flex;
+            align-items: center;
+        }
+
+        .circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: green;
+             animation: change-color 4s infinite;
+        }
+
+        @keyframes change-color {
+            0% {
+            background-color: #00ff00;
+            }
+            50% {
+            background-color: #005500;
+            }
+            100% {
+            background-color: #00ff00;
+            }
+        }
+
+    </style>
+
 </head>
 
 <body>
-      <button onclick="songFinishes()">Start</button>
+
+    <div class="containerConnectionStatus">
+        <span class="circle" id="connectionCircle" style="display:none;"></span>
+    </div>
+
+    <h1 id="title" class="animated-title">Interactive viewer</h1>
+
+    <div class="container">
+        <button id="start_button" onclick="songFinishes(this)" class="startButton">START</button>
+    </div>
+
 </body>
 
 <script src="js/main.js"></script>
