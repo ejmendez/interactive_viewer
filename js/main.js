@@ -89,15 +89,7 @@ function connectWebSocket() {
         }
     });
 
-    socket.onclose = function(event) {
-          if (event.wasClean) {
-            alert(`[close] Connection closed successfully, code=${event.code} reason=${event.reason}`);
-          } else {
-            // ej. El proceso del servidor se detuvo o la red está caída
-            // event.code es usualmente 1006 en este caso
-            alert('[close] The connection is lost');
-          }
-    };
+
 }
 
 async function lockWakeState() {
