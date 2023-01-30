@@ -143,11 +143,12 @@ function show_connection_button() {
 
 function start_connected_page() {
 
-    title_1.style.display       = "none";
-    title_2.style.display       = "none";
+    title_1.style.display        = "none";
+    title_2.style.display        = "none";
 
-    credits.style.background   = "none";
-    credits.style.top          = 0;
+    credits.style.background     = "none";
+    credits.style.top            = 0;
+    credits.style.width          = "40%";
 
     start_button.style.display   = "none";
     connectingBar.style.display  = "none";
