@@ -2,6 +2,37 @@ body {
     background  : #161211;
 }
 
+.loading-container {
+    display: flex;
+    color      : green;
+    border-color : green;
+}
+
+.loading-bar {
+    width           : 30px;
+    height          : 30px;
+    border-radius   : 50%;
+    border          : 5px solid;
+    border-top-color: transparent;
+    animation       : spin 1s ease-in-out infinite;
+}
+
+.loading-text {
+    font-family: 'Chivo', sans-serif;
+    font-size  : 200%;
+    margin-left: 20px;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+
 .animated-title {
 
     font-family   : 'Montserrat', sans-serif;

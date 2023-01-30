@@ -23,12 +23,16 @@
 
     <h1 id="title_2" class="title_2">"Use your phone and be part of the show..."</h1>
 
-    <div class="container">
-      <button id="start_button" class="startButton" onclick="songFinishes(this)">START</button>
-    </div>
 
+    <div class="container">
+        <div id="connecting-box"class="loading-container">
+            <div id="connecting-bar" class="loading-bar" style="display:none;"></div>
+            <div id="connecting-text" class="loading-text" style="display:none;">Connecting...</div>
+        </div>
+        <button id="start_button" class="startButton" onclick="init_connection(this)">START</button>
+    </div>
     <div id="credits" class="creation_box">
-        <p class="info">2023 EliasMCh | All rights reserved.</p>
+        <p class="info">2023 EliasMCh | MIT license</p>
     <div class="creation_box">
 
 </body>

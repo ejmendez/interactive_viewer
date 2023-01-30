@@ -7,6 +7,15 @@ let track            = "";
 
 let canVibrate = false;
 
+const title_1          = document.getElementById("title");
+const title_2          = document.getElementById("title_2");
+const start_button     = document.getElementById("start_button");
+const credits          = document.getElementById("credits");
+const connectionCircle = document.getElementById("connectionCircle");
+const connectingBox    = document.querySelector('#connecting-box');
+const connectingBar    = document.querySelector('#connecting-bar');
+const connectingText   = document.querySelector('#connecting-text');
+
 if('vibrate' in navigator) {
     canVibrate = true;
 }
@@ -22,10 +31,19 @@ const canWakeLock = () => 'wakeLock' in navigator;
 let wakelock;
 
 function connectWebSocket() {
+
+    show_connection_bar();
+
     const socket = new WebSocket('wss://interactiveviewer.glitch.me/?user-agent=Mozilla');
 
     socket.onerror = function(error) {
-      alert(`[Error connecting to the host]`);
+        connectingBar.style.display = "none";
+        connectingBox.style.color   = "red";
+        connectingText.innerHTML    = "Connection error, please try again...";
+
+        setTimeout(function() {
+          show_connection_button()
+        }, 3000);
     };
 
     socket.addEventListener('open', function (event) {
@@ -107,22 +125,34 @@ async function lockWakeState() {
     }
 }
 
+function show_connection_bar() {
+    connectingBar.style.display  = "inline";
+    connectingText.style.display = "inline";
+    start_button.style.display   = "none";
+}
+
+function show_connection_button() {
+    connectingBar.style.display  = "none";
+    connectingText.style.display = "none";
+    start_button.style.display   = "inline";
+
+    connectingBox.style.color = "green";
+    connectingText.innerHTML = "Connecting...";
+
+}
+
 function start_connected_page() {
 
-    var elementos = document.getElementById("title");
-    elementos.style.display = "none";
+    title_1.style.display       = "none";
+    title_2.style.display       = "none";
 
-    var elementos = document.getElementById("title_2");
-    elementos.style.display = "none";
+    credits.style.background   = "none";
+    credits.style.top          = 0;
 
-    var elementos = document.getElementById("credits");
-    elementos.style.background = "none";
-    elementos.style.top        = 0;
+    start_button.style.display   = "none";
+    connectingBar.style.display  = "none";
+    connectingText.style.display = "none";
 
-    var elementos = document.getElementById("start_button");
-    elementos.style.display = "none";
-
-    let connectionCircle = document.getElementById("connectionCircle");
     connectionCircle.style.display = "inline";
 
     connectionCircle.addEventListener("mouseover", function() {
@@ -145,7 +175,8 @@ function start_connected_page() {
     };
 }
 
-function songFinishes(element) {
+
+function init_connection(element) {
     song_in_progress = 0
 
     connectWebSocket();
