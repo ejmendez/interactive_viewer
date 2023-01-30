@@ -112,6 +112,13 @@ function start_connected_page() {
     var elementos = document.getElementById("title");
     elementos.style.display = "none";
 
+    var elementos = document.getElementById("title_2");
+    elementos.style.display = "none";
+
+    var elementos = document.getElementById("credits");
+    elementos.style.background = "none";
+    elementos.style.top        = 0;
+
     var elementos = document.getElementById("start_button");
     elementos.style.display = "none";
 

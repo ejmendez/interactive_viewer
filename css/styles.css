@@ -1,0 +1,134 @@
+body {
+    background  : #161211;
+}
+
+.animated-title {
+
+    font-family   : 'Montserrat', sans-serif;
+    text-align    : center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    text-align    : center;
+    font-size     : 600%;
+    font-weight   : bold;
+    color         : white;
+    animation     : animateTitle 2s ease-in-out infinite;
+    border-bottom : 4px solid blue;
+}
+
+.title_2 {
+
+    font-family   : 'Montserrat', sans-serif;
+    font-style    : italic;
+    text-align    : center;
+    letter-spacing: 0.1em;
+
+    text-align    : center;
+    font-size     : 200%;
+    font-weight   : bold;
+    color         : white;
+}
+
+@keyframes animateTitle {
+    0% {
+        transform: rotateY(-26deg);
+    }
+    100% {
+        transform: rotateY(26deg);
+        border-bottom-color: black;
+    }
+
+    0%   { border-color: red; }
+    20%  { border-color: yellow; }
+    40%  { border-color: blue; }
+    60%  { border-color: green; }
+    80%  { border-color: purple; }
+    100% { border-color: red; }
+}
+
+/* Crea una clase para el botón */
+.startButton {
+    font-family    : 'Chivo', sans-serif;;
+    background     : yellow; /* Crea un degradado */
+    border         : 2px solid #ff5500; /* Establece los bordes sólidos */
+    border-radius  : 40px; /* Establece los bordes redondeados */
+    color          : black; /* Establece el color del texto */
+    font-size      : 400%; /* Establece el tamaño de la fuente */
+    padding        : 10px 20px; /* Establece el espaciado interno */
+    text-align     : center; /* Centra el texto */
+    text-decoration: none; /* Quita la decoración debajo del texto */
+    transition     : all 0.3s ease; /* Añade una transición suave */
+    border-color   : black;
+    box-shadow     : 0px 0px 10px #ffffff;
+}
+
+/* Añade un efecto hover al botón */
+.startButton:hover {
+    transform : scale(1.1);
+    box-shadow: 0 0 10px #fff;
+}
+
+.container {
+    position : absolute;
+    top      : 35%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+    height   : auto;
+}
+
+.containerConnectionStatus {
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+     width           : 30px;
+     height          : 30px;
+     border-radius   : 50%;
+     background-color: green;
+     animation       : change-color 4s infinite;
+}
+
+@keyframes change-color {
+    0% {
+    background-color: #00ff00;
+    }
+    50% {
+    background-color: #005500;
+    }
+    100% {
+    background-color: #00ff00;
+    }
+}
+
+.creation_box {
+    position        : fixed;
+    bottom          : 0;
+    width           : 100%;
+    text-align      : right;
+    color           : white;
+    font-style      : italic;
+    font-size       : 100%;
+    padding-right   : 50px;
+    background      : black;
+}
+
+.creation_box .info {
+    padding-right: 50px;
+}
+
+/* Estilos para pantallas horizontales */
+@media (orientation: landscape) {
+  .container {
+    top      : 55%;
+  }
+
+}
+
+/* Estilos para pantallas verticales */
+@media (orientation: portrait) {
+  .container {
+    top : 35%;
+  }
+}
