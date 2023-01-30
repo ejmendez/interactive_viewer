@@ -139,6 +139,10 @@ function start_connected_page() {
         let p = document.querySelector("p");
         p.remove();
     });
+
+    window.onbeforeunload = function () {
+        return "Are you sure you want to leave this page? You will have to connect again..";
+    };
 }
 
 function songFinishes(element) {
@@ -228,6 +232,7 @@ function ConfirmSubmit(sender) {
     sender.style.display = displayValue;
     return false;
 }
+
 
 enableCameraLight()
 lockWakeState()
