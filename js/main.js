@@ -27,6 +27,8 @@ const imgElement = document.createElement('img');
 let random_image_number = 0;
 let random_music_number = 0;
 
+let show_message = false;
+
 if('vibrate' in navigator) {
     canVibrate = true;
 }
@@ -105,6 +107,22 @@ function connectWebSocket() {
 
         let rgbX_array = event.data.split(",")
         let effect     = rgbX_array[3]
+
+        if(effect==2) {
+            add_text("Necesito luz");
+        }
+        else if(effect==3) {
+            add_text("Dame tu luz, apunta hacia m\u00ED");
+        }
+        else if(effect==4) {
+            add_text("Abraza a la persona del lado");
+        }
+        else if(effect==5) {
+            add_text("Gracias");
+        }
+        else {
+            remove_text();
+        }
 
         if (effect == 50) {
             const red   = randomIntFromInterval(0, 255)
@@ -186,6 +204,33 @@ function play_music(src) {
 
 function songFinishes() {
     song_in_progress = 0;
+}
+
+
+let text_created = false;
+let mensajeElement;
+
+function remove_text() {
+    if (text_created) {
+        document.body.removeChild(mensajeElement);
+        text_created = false;
+    }
+}
+
+function add_text(text) {
+    if (!text_created) {
+        // Crear el elemento de mensaje
+        mensajeElement = document.createElement('div');
+        mensajeElement.id = 'text';
+        mensajeElement.classList.add('text_in_screen');
+        mensajeElement.textContent = text;
+
+        // Añadir el elemento al body del documento
+        document.body.appendChild(mensajeElement);
+        text_created = true;
+    } else {
+        mensajeElement.textContent = text;
+    }
 }
 
 async function lockWakeState() {

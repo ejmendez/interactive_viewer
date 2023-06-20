@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Workspace>
-<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FunctionManager">
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="VirtualConsole">
  <Creator>
   <Name>Q Light Controller Plus</Name>
-  <Version>4.12.6</Version>
-  <Author>ejmendez</Author>
+  <Version>4.12.7</Version>
+  <Author>ejome</Author>
  </Creator>
  <Engine>
   <InputOutputMap>
    <Universe Name="Universe 1" ID="0">
-    <Output Plugin="DMX USB" UID="None" Line="0"/>
+    <Output Plugin="DMX USB" UID="DMX USB PRO - DMX Output 1 - (S/N: 2378699)" Line="0">
+     <PluginParameters UniverseChannels="77"/>
+    </Output>
    </Universe>
    <Universe Name="Universe 2" ID="1">
-    <Output Plugin="ArtNet" UID="169.254.236.43" Line="6"/>
+    <Output Plugin="ArtNet" UID="None" Line="5"/>
    </Universe>
    <Universe Name="Universe 3" ID="2"/>
    <Universe Name="Universe 4" ID="3"/>
@@ -196,9 +198,9 @@
   </Function>
   <Function ID="8" Type="Scene" Name="Luces_elias_strobe">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <ChannelGroupsVal>5,255,12,255</ChannelGroupsVal>
-   <FixtureVal ID="0">0,255,7,255</FixtureVal>
-   <FixtureVal ID="1">0,255,7,255</FixtureVal>
+   <ChannelGroupsVal>5,255,12,226,9,255</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,4,255,7,226</FixtureVal>
+   <FixtureVal ID="1">0,255,4,255,7,226</FixtureVal>
   </Function>
   <Function ID="9" Type="Scene" Name="Interactive_viewer_amarillo">
    <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
@@ -1103,9 +1105,10 @@
   </Function>
   <Function ID="157" Type="Collection" Name="Escena_3_Mar">
    <Step Number="0">90</Step>
-   <Step Number="1">87</Step>
-   <Step Number="2">156</Step>
-   <Step Number="3">177</Step>
+   <Step Number="1">156</Step>
+   <Step Number="2">177</Step>
+   <Step Number="3">80</Step>
+   <Step Number="4">70</Step>
   </Function>
   <Function ID="158" Type="Scene" Name="Interactive_viewer_negro">
    <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
@@ -1177,8 +1180,10 @@
   <Function ID="170" Type="Collection" Name="Escena1_Bosque">
    <Step Number="0">20</Step>
    <Step Number="1">169</Step>
+   <Step Number="2">92</Step>
+   <Step Number="3">77</Step>
   </Function>
-  <Function ID="171" Type="Scene" Name="Interactive_viewer_effect_random_images">
+  <Function ID="171" Type="Scene" Name="Interactive_viewer_effect_random_images_1">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">3,60</FixtureVal>
   </Function>
@@ -1186,7 +1191,7 @@
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <FixtureVal ID="8">3,61</FixtureVal>
   </Function>
-  <Function ID="173" Type="Chaser" Name="Interactive_viewer_random_images">
+  <Function ID="173" Type="Chaser" Name="Interactive_viewer_random_images_1">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
@@ -1216,9 +1221,9 @@
    <Direction>Forward</Direction>
    <RunOrder>Loop</RunOrder>
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
-   <Step Number="0" FadeIn="0" Hold="1000" FadeOut="0">165</Step>
+   <Step Number="0" FadeIn="0" Hold="1000" FadeOut="0">179</Step>
    <Step Number="1" FadeIn="0" Hold="700" FadeOut="0">175</Step>
-   <Step Number="2" FadeIn="0" Hold="700" FadeOut="0">176</Step>
+   <Step Number="2" FadeIn="0" Hold="4000" FadeOut="0">176</Step>
   </Function>
   <Function ID="178" Type="Scene" Name="Interactive_viewer_effect_sounds_2">
    <Speed FadeIn="0" FadeOut="0" Duration="0"/>
@@ -1231,6 +1236,114 @@
    <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
    <Step Number="0" FadeIn="0" Hold="1000" FadeOut="0">178</Step>
    <Step Number="1" FadeIn="0" Hold="1000" FadeOut="0">168</Step>
+  </Function>
+  <Function ID="180" Type="Scene" Name="Interactive_viewer_effect_strobe_blanco">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,55</FixtureVal>
+  </Function>
+  <Function ID="181" Type="Scene" Name="Interactive_viewer_effect_strobe_negro">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,56</FixtureVal>
+  </Function>
+  <Function ID="182" Type="Chaser" Name="Interactive_viewer_random_strobe">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="100" FadeOut="0">180</Step>
+   <Step Number="1" FadeIn="0" Hold="100" FadeOut="0">181</Step>
+  </Function>
+  <Function ID="183" Type="Scene" Name="Interactive_viewer_effect_random_images_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,62</FixtureVal>
+  </Function>
+  <Function ID="184" Type="Chaser" Name="Interactive_viewer_random_images_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="1000" FadeOut="0">183</Step>
+   <Step Number="1" FadeIn="0" Hold="1000" FadeOut="0">172</Step>
+  </Function>
+  <Function ID="185" Type="Collection" Name="Escena4_Fotos">
+   <Step Number="0">79</Step>
+   <Step Number="1">97</Step>
+   <Step Number="2">186</Step>
+   <Step Number="3">135</Step>
+  </Function>
+  <Function ID="186" Type="Chaser" Name="Interactive_viewer_flash_with_images">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="500" FadeOut="0">164</Step>
+   <Step Number="1" FadeIn="0" Hold="2000" FadeOut="0">173</Step>
+   <Step Number="2" FadeIn="0" Hold="500" FadeOut="0">187</Step>
+   <Step Number="3" FadeIn="0" Hold="3000" FadeOut="0">173</Step>
+  </Function>
+  <Function ID="187" Type="Scene" Name="Interactive_viewer_effect_not_flash">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,0</FixtureVal>
+  </Function>
+  <Function ID="189" Type="Collection" Name="Escena5"/>
+  <Function ID="190" Type="Collection" Name="Escena5_Cancion">
+   <Step Number="0">33</Step>
+   <Step Number="1">98</Step>
+   <Step Number="2">151</Step>
+   <Step Number="3">161</Step>
+   <Step Number="4">72</Step>
+  </Function>
+  <Function ID="191" Type="Scene" Name="Luces_elias_roja_bajita">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>13,0,12,0,11,0,10,0,9,87,8,0,7,0,6,100,5,43</ChannelGroupsVal>
+   <FixtureVal ID="0">0,43,1,100,2,0,3,0,4,87,5,0,6,0,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,43,1,100,2,0,3,0,4,87,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="192" Type="Chaser" Name="">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="Common"/>
+  </Function>
+  <Function ID="193" Type="Collection" Name="Escena_opcional_Strobe">
+   <Step Number="0">8</Step>
+   <Step Number="1">182</Step>
+  </Function>
+  <Function ID="194" Type="Chaser" Name="Escena_3">
+   <Speed FadeIn="0" FadeOut="0" Duration="3000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="6000" FadeOut="0">157</Step>
+   <Step Number="1" FadeIn="0" Hold="2000" FadeOut="0">193</Step>
+  </Function>
+  <Function ID="195" Type="Chaser" Name="Interactive_viewer_flash">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="10000" FadeOut="0">164</Step>
+   <Step Number="1" FadeIn="0" Hold="500" FadeOut="0">187</Step>
+  </Function>
+  <Function ID="196" Type="Scene" Name="Interactive_viewer_effect_text_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,2</FixtureVal>
+  </Function>
+  <Function ID="197" Type="Scene" Name="Interactive_viewer_effect_delete_text">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,6</FixtureVal>
+  </Function>
+  <Function ID="198" Type="Scene" Name="Interactive_viewer_effect_text_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,3</FixtureVal>
+  </Function>
+  <Function ID="199" Type="Scene" Name="Interactive_viewer_effect_text_3">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,4</FixtureVal>
+  </Function>
+  <Function ID="200" Type="Scene" Name="Interactive_viewer_effect_text_4">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,5</FixtureVal>
   </Function>
   <Monitor DisplayMode="1" ShowLabels="0">
    <Font>Arial,12,-1,5,50,0,0,0,0,0</Font>
@@ -1262,7 +1375,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>MS Shell Dlg 2,14,-1,5,75,0,0,0,0,0</Font>
     </Appearance>
-    <WindowState Visible="False" X="165" Y="0" Width="1530" Height="1260"/>
+    <WindowState Visible="True" X="105" Y="0" Width="1690" Height="1255"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -1277,16 +1390,16 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0</Font>
      </Appearance>
-     <WindowState Visible="False" X="0" Y="445" Width="1130" Height="265"/>
+     <WindowState Visible="True" X="0" Y="575" Width="1130" Height="265"/>
      <AllowChildren>True</AllowChildren>
      <AllowResize>True</AllowResize>
      <ShowHeader>True</ShowHeader>
      <ShowEnableButton>True</ShowEnableButton>
      <Mixing>False</Mixing>
-     <Collapsed>False</Collapsed>
-     <Disabled>False</Disabled>
+     <Collapsed>True</Collapsed>
+     <Disabled>True</Disabled>
      <Button Caption="Blanco" ID="17" Icon="">
-      <WindowState Visible="False" X="25" Y="50" Width="210" Height="60"/>
+      <WindowState Visible="True" X="25" Y="50" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1299,7 +1412,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="Rojo" ID="1" Icon="">
-      <WindowState Visible="False" X="245" Y="50" Width="210" Height="60"/>
+      <WindowState Visible="True" X="245" Y="50" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1312,7 +1425,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="Verde" ID="20" Icon="">
-      <WindowState Visible="False" X="465" Y="50" Width="210" Height="60"/>
+      <WindowState Visible="True" X="465" Y="50" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>4278190080</ForegroundColor>
@@ -1325,7 +1438,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="Azul" ID="21" Icon="">
-      <WindowState Visible="False" X="685" Y="50" Width="210" Height="60"/>
+      <WindowState Visible="True" X="685" Y="50" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1338,7 +1451,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="Amarillo" ID="22" Icon="">
-      <WindowState Visible="False" X="905" Y="50" Width="210" Height="60"/>
+      <WindowState Visible="True" X="905" Y="50" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1351,7 +1464,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="Ambar" ID="23" Icon="">
-      <WindowState Visible="False" X="25" Y="115" Width="210" Height="60"/>
+      <WindowState Visible="True" X="25" Y="115" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1364,7 +1477,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="UV" ID="24" Icon="">
-      <WindowState Visible="False" X="685" Y="115" Width="210" Height="60"/>
+      <WindowState Visible="True" X="685" Y="115" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1377,7 +1490,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="Celeste" ID="25" Icon="">
-      <WindowState Visible="False" X="465" Y="115" Width="210" Height="60"/>
+      <WindowState Visible="True" X="465" Y="115" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1390,7 +1503,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="Morado" ID="26" Icon="">
-      <WindowState Visible="False" X="245" Y="115" Width="210" Height="60"/>
+      <WindowState Visible="True" X="245" Y="115" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1403,7 +1516,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="Strobe" ID="29" Icon="">
-      <WindowState Visible="False" X="25" Y="200" Width="210" Height="60"/>
+      <WindowState Visible="True" X="25" Y="200" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1416,7 +1529,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="Rosado" ID="30" Icon="">
-      <WindowState Visible="False" X="905" Y="115" Width="210" Height="60"/>
+      <WindowState Visible="True" X="905" Y="115" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1429,7 +1542,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="Negro" ID="2" Icon="">
-      <WindowState Visible="False" X="245" Y="200" Width="210" Height="60"/>
+      <WindowState Visible="True" X="245" Y="200" Width="210" Height="60"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>4294967295</ForegroundColor>
@@ -1450,16 +1563,16 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0</Font>
      </Appearance>
-     <WindowState Visible="False" X="0" Y="745" Width="665" Height="345"/>
+     <WindowState Visible="True" X="0" Y="885" Width="665" Height="345"/>
      <AllowChildren>True</AllowChildren>
      <AllowResize>True</AllowResize>
      <ShowHeader>True</ShowHeader>
      <ShowEnableButton>True</ShowEnableButton>
      <Mixing>False</Mixing>
-     <Collapsed>False</Collapsed>
+     <Collapsed>True</Collapsed>
      <Disabled>False</Disabled>
      <XYPad Caption="XY Pad" ID="35" InvertedAppearance="0">
-      <WindowState Visible="False" X="40" Y="85" Width="255" Height="230"/>
+      <WindowState Visible="True" X="40" Y="85" Width="255" Height="230"/>
       <Appearance>
        <FrameStyle>Sunken</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1476,7 +1589,7 @@
       <Tilt Position="217"/>
      </XYPad>
      <XYPad Caption="XY Pad" ID="36" InvertedAppearance="0">
-      <WindowState Visible="False" X="385" Y="85" Width="265" Height="240"/>
+      <WindowState Visible="True" X="385" Y="85" Width="265" Height="240"/>
       <Appearance>
        <FrameStyle>Sunken</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1501,7 +1614,7 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <WindowState Visible="False" X="25" Y="55" Width="1470" Height="365"/>
+     <WindowState Visible="True" X="25" Y="55" Width="1635" Height="500"/>
      <AllowChildren>True</AllowChildren>
      <AllowResize>True</AllowResize>
      <ShowHeader>True</ShowHeader>
@@ -1510,7 +1623,7 @@
      <Collapsed>False</Collapsed>
      <Disabled>False</Disabled>
      <Button Caption="1- Bosque" ID="8" Icon="">
-      <WindowState Visible="False" X="30" Y="75" Width="245" Height="115"/>
+      <WindowState Visible="True" X="285" Y="80" Width="245" Height="115"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1523,7 +1636,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="4-Fotos" ID="9" Icon="">
-      <WindowState Visible="False" X="820" Y="75" Width="245" Height="115"/>
+      <WindowState Visible="True" X="1105" Y="80" Width="245" Height="115"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1531,12 +1644,12 @@
        <BackgroundImage>None</BackgroundImage>
        <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
       </Appearance>
-      <Function ID="173"/>
+      <Function ID="185"/>
       <Action>Toggle</Action>
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="2-Feliz" ID="10" Icon="">
-      <WindowState Visible="False" X="290" Y="75" Width="245" Height="115"/>
+      <WindowState Visible="True" X="550" Y="80" Width="245" Height="115"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1549,7 +1662,7 @@
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="3-Mar" ID="11" Icon="">
-      <WindowState Visible="False" X="550" Y="75" Width="245" Height="115"/>
+      <WindowState Visible="True" X="830" Y="80" Width="245" Height="115"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>4278190207</ForegroundColor>
@@ -1557,12 +1670,12 @@
        <BackgroundImage>None</BackgroundImage>
        <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
       </Appearance>
-      <Function ID="157"/>
+      <Function ID="194"/>
       <Action>Toggle</Action>
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="5-Música" ID="6" Icon="">
-      <WindowState Visible="False" X="1100" Y="75" Width="245" Height="115"/>
+      <WindowState Visible="True" X="1380" Y="80" Width="245" Height="115"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>Default</ForegroundColor>
@@ -1570,12 +1683,12 @@
        <BackgroundImage>None</BackgroundImage>
        <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
       </Appearance>
-      <Function ID="173"/>
+      <Function ID="190"/>
       <Action>Toggle</Action>
       <Intensity Adjust="False">100</Intensity>
      </Button>
      <Button Caption="Negro - Apagón" ID="13" Icon="">
-      <WindowState Visible="False" X="545" Y="215" Width="245" Height="115"/>
+      <WindowState Visible="True" X="545" Y="215" Width="245" Height="115"/>
       <Appearance>
        <FrameStyle>None</FrameStyle>
        <ForegroundColor>4294967295</ForegroundColor>
@@ -1584,6 +1697,97 @@
        <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
       </Appearance>
       <Function ID="50"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="0- Inicio" ID="0" Icon="">
+      <WindowState Visible="True" X="10" Y="80" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294967295</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="195"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Quitar Flash" ID="32" Icon="">
+      <WindowState Visible="True" X="1385" Y="365" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4278190080</ForegroundColor>
+       <BackgroundColor>4289396735</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="187"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Texto: Apunta a la pared" ID="33" Icon="">
+      <WindowState Visible="True" X="295" Y="365" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4278190080</ForegroundColor>
+       <BackgroundColor>4294967167</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,18,-1,5,50,0,0,0,0,0,Regular</Font>
+      </Appearance>
+      <Function ID="198"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Texto: Abrazar" ID="37" Icon="">
+      <WindowState Visible="True" X="830" Y="365" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4278190080</ForegroundColor>
+       <BackgroundColor>4294967167</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,18,-1,5,50,0,0,0,0,0,Regular</Font>
+      </Appearance>
+      <Function ID="199"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Texto: Necesito Luz" ID="38" Icon="">
+      <WindowState Visible="True" X="25" Y="365" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294967167</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,18,-1,5,50,0,0,0,0,0,Regular</Font>
+      </Appearance>
+      <Function ID="196"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Texto: Gracias" ID="39" Icon="">
+      <WindowState Visible="True" X="1105" Y="365" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294967167</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,18,-1,5,50,0,0,0,0,0,Regular</Font>
+      </Appearance>
+      <Function ID="200"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Borrar Texto" ID="40" Icon="">
+      <WindowState Visible="True" X="555" Y="365" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294967167</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,18,-1,5,50,0,0,0,0,0,Regular</Font>
+      </Appearance>
+      <Function ID="197"/>
       <Action>Toggle</Action>
       <Intensity Adjust="False">100</Intensity>
      </Button>

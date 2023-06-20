@@ -6,6 +6,21 @@ body {
       display: none;
 }
 
+.text_in_screen {
+    font-family   : 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #000000;
+    z-index: 9999;
+}
+
 .fullscreen-image {
   display: block;
   width: 100%;
