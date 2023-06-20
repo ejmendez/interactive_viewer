@@ -16,7 +16,9 @@ const connectingBox    = document.querySelector('#connecting-box');
 const connectingBar    = document.querySelector('#connecting-bar');
 const connectingText   = document.querySelector('#connecting-text');
 
-const images_array   = ["1.jpg", "2.jpg","3.jpg","4.jpg","5.jpg","6.jpeg","7.jpg","8.jpg"];
+const images_array_1 = ["1.jpg", "2.jpg","3.jpg","4.jpg","5.jpg","6.jpeg","7.jpg","8.jpg"];
+const images_array_2 = ["bebe_1.webp", "bebe_2.webp","bebe_3.jpeg","bebe_4.webp","bebe_5.jpg"];
+
 const sounds_array_1 = ["birds.mp3", "grillo.mp3", "Campana.mp3"];
 const sounds_array_2 = ["Lluvia.mp3", "Trueno.mp3", "Llantos.mp3"];
 
@@ -54,6 +56,25 @@ function getRandomSound(sounds_array) {
   return src
 }
 
+
+
+function getRandomImage(images_array) {
+    let random_number = randomIntFromInterval(0, images_array.length - 1);
+
+    while (random_number === random_image_number) {
+      random_number = randomIntFromInterval(0, images_array.length - 1);
+    }
+
+    random_image_number = random_number;
+
+    let random_image = "./images/" + images_array[random_image_number];
+    imgElement.src       = random_image;
+    imgElement.className = 'fullscreen-image';
+
+    document.body.appendChild(imgElement);
+
+    document.body.style.backgroundColor = "rgb" + "(0,0,0)";
+}
 
 
 function connectWebSocket() {
@@ -105,22 +126,10 @@ function connectWebSocket() {
 
 
         if (effect == 60) {
-
-            let random_number = randomIntFromInterval(0, images_array.length - 1);
-
-            while (random_number === random_image_number) {
-              random_number = randomIntFromInterval(0, images_array.length - 1);
-            }
-
-            random_image_number = random_number;
-
-            let random_image = "./images/" + images_array[random_image_number];
-            imgElement.src       = random_image;
-            imgElement.className = 'fullscreen-image';
-
-            document.body.appendChild(imgElement);
-
-            document.body.style.backgroundColor = "rgb" + "(0,0,0)";
+            getRandomImage(images_array_1);
+        }
+        else if (effect == 62) {
+            getRandomImage(images_array_2);
         }
         else if(effect != 61) {
             imgElement.className = 'hidden';
