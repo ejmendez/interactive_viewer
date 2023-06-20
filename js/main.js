@@ -16,8 +16,9 @@ const connectingBox    = document.querySelector('#connecting-box');
 const connectingBar    = document.querySelector('#connecting-bar');
 const connectingText   = document.querySelector('#connecting-text');
 
-const images_array = ["bebe_1.webp", "bebe_2.webp", "bebe_3.jpeg", "bebe_4.webp", "bebe_5.jpg"];
-const music_array = ["birds.mp3", "grillo.mp3"];
+const images_array   = ["1.jpg", "2.jpg","3.jpg","4.jpg","5.jpg","6.jpeg","7.jpg","8.jpg"];
+const sounds_array_1 = ["birds.mp3", "grillo.mp3", "Campana.mp3"];
+const sounds_array_2 = ["Lluvia.mp3", "Trueno.mp3", "Llantos.mp3"];
 
 const imgElement = document.createElement('img');
 
@@ -37,6 +38,23 @@ function vibrate() {
 const canWakeLock = () => 'wakeLock' in navigator;
 
 let wakelock;
+
+
+function getRandomSound(sounds_array) {
+  let random_number = randomIntFromInterval(0, sounds_array.length - 1);
+
+  while (random_number === random_music_number) {
+    random_number = randomIntFromInterval(0, sounds_array.length - 1);
+  }
+
+  random_music_number = random_number;
+
+  const src = "./music/" + sounds_array[random_music_number];
+
+  return src
+}
+
+
 
 function connectWebSocket() {
 
@@ -78,6 +96,13 @@ function connectWebSocket() {
             document.body.style.backgroundColor = "rgb" + "(" + rgbX_array[0] + ", " + rgbX_array[1] + ", " + rgbX_array[2] + ")";
         }
 
+        if(effect == 55) {
+            document.body.style.backgroundColor = "rgb(255,255,255)";
+        }
+        else if(effect == 56) {
+            document.body.style.backgroundColor = "rgb(0,0,0)";
+        }
+
 
         if (effect == 60) {
 
@@ -107,16 +132,12 @@ function connectWebSocket() {
             let src        = ""
 
             if (effect == 70) {
-                let random_number = randomIntFromInterval(0, music_array.length - 1);
-
-                while (random_number === random_music_number) {
-                  random_number = randomIntFromInterval(0, music_array.length - 1);
-                }
-
-                random_music_number = random_number;
-
-                src = "./music/" + music_array[random_music_number];
                 play_audio = 1
+                src = getRandomSound(sounds_array_1)
+            }
+            else if (effect == 80) {
+                play_audio = 1
+                src = getRandomSound(sounds_array_2)
             }
             else if (effect == 100) {
                 src        = 'music/birds.mp3';

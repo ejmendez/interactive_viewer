@@ -1,0 +1,1601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Workspace>
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FunctionManager">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>4.12.6</Version>
+  <Author>ejmendez</Author>
+ </Creator>
+ <Engine>
+  <InputOutputMap>
+   <Universe Name="Universe 1" ID="0">
+    <Output Plugin="DMX USB" UID="None" Line="0"/>
+   </Universe>
+   <Universe Name="Universe 2" ID="1">
+    <Output Plugin="ArtNet" UID="169.254.236.43" Line="6"/>
+   </Universe>
+   <Universe Name="Universe 3" ID="2"/>
+   <Universe Name="Universe 4" ID="3"/>
+  </InputOutputMap>
+  <Fixture>
+   <Manufacturer>Shehds</Manufacturer>
+   <Model>Led Zoom Par 18x18W</Model>
+   <Mode>10 Channels</Mode>
+   <ID>0</ID>
+   <Name>Led Zoom Par 18x18W #1</Name>
+   <Universe>0</Universe>
+   <Address>0</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Shehds</Manufacturer>
+   <Model>Led Zoom Par 18x18W</Model>
+   <Mode>10 Channels</Mode>
+   <ID>1</ID>
+   <Name>Led Zoom Par 18x18W #2</Name>
+   <Universe>0</Universe>
+   <Address>10</Address>
+   <Channels>10</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Shehds</Manufacturer>
+   <Model>Cabeza movil RGBWA + UV 7x18W</Model>
+   <Mode>Channels</Mode>
+   <ID>2</ID>
+   <Name>Cabeza movil RGBWA + UV 7x18W</Name>
+   <Universe>0</Universe>
+   <Address>20</Address>
+   <Channels>15</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>TNT </Manufacturer>
+   <Model>PAR</Model>
+   <Mode>8K</Mode>
+   <ID>3</ID>
+   <Name>PAR #1</Name>
+   <Universe>0</Universe>
+   <Address>35</Address>
+   <Channels>8</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>TNT </Manufacturer>
+   <Model>PAR</Model>
+   <Mode>8K</Mode>
+   <ID>4</ID>
+   <Name>PAR #2</Name>
+   <Universe>0</Universe>
+   <Address>43</Address>
+   <Channels>8</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>TNT</Manufacturer>
+   <Model>Cabeza</Model>
+   <Mode>9 CANAL</Mode>
+   <ID>5</ID>
+   <Name>Cabeza</Name>
+   <Universe>0</Universe>
+   <Address>51</Address>
+   <Channels>9</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>miboxer</Manufacturer>
+   <Model>Miboxer-bulb</Model>
+   <Mode>5 Channels</Mode>
+   <ID>6</ID>
+   <Name>Miboxer-bulb</Name>
+   <Universe>0</Universe>
+   <Address>60</Address>
+   <Channels>5</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>miboxer</Manufacturer>
+   <Model>Miboxer-bulb</Model>
+   <Mode>5 Channels</Mode>
+   <ID>7</ID>
+   <Name>Miboxer-bulb</Name>
+   <Universe>0</Universe>
+   <Address>65</Address>
+   <Channels>5</Channels>
+  </Fixture>
+  <Fixture>
+   <Manufacturer>Elias</Manufacturer>
+   <Model>Interactive viewer</Model>
+   <Mode>Channels</Mode>
+   <ID>8</ID>
+   <Name>Interactive viewer</Name>
+   <Universe>0</Universe>
+   <Address>70</Address>
+   <Channels>7</Channels>
+  </Fixture>
+  <FixtureGroup ID="0">
+   <Name>LucesElias</Name>
+   <Size X="2" Y="1"/>
+   <Head X="0" Y="0" Fixture="0">0</Head>
+   <Head X="1" Y="0" Fixture="1">0</Head>
+   <Head X="0" Y="1" Fixture="5">0</Head>
+   <Head X="1" Y="1" Fixture="7">0</Head>
+  </FixtureGroup>
+  <ChannelsGroup ID="0" Name="TNT_dimmer" Value="0">3,3,4,3</ChannelsGroup>
+  <ChannelsGroup ID="1" Name="TNT_rojo" Value="0">3,4,4,4</ChannelsGroup>
+  <ChannelsGroup ID="2" Name="TNT_verde" Value="0">3,5,4,5</ChannelsGroup>
+  <ChannelsGroup ID="3" Name="TNT_azul" Value="0">3,6,4,6</ChannelsGroup>
+  <ChannelsGroup ID="4" Name="TNT_blanco" Value="0">3,7</ChannelsGroup>
+  <ChannelsGroup ID="5" Name="Elias_dimmer" Value="0">0,0,1,0</ChannelsGroup>
+  <ChannelsGroup ID="6" Name="Elias_rojo" Value="0">0,1,1,1</ChannelsGroup>
+  <ChannelsGroup ID="7" Name="Elias_verde" Value="0">0,2,1,2</ChannelsGroup>
+  <ChannelsGroup ID="8" Name="Elias_azul" Value="0">0,3,1,3</ChannelsGroup>
+  <ChannelsGroup ID="9" Name="Elias_blanco" Value="0">0,4,1,4</ChannelsGroup>
+  <ChannelsGroup ID="10" Name="Elias_ambar" Value="0">0,5,1,5</ChannelsGroup>
+  <ChannelsGroup ID="11" Name="Elias_uv" Value="0">0,6,1,6</ChannelsGroup>
+  <ChannelsGroup ID="12" Name="Elias_strobe" Value="0">0,7,1,7</ChannelsGroup>
+  <ChannelsGroup ID="13" Name="Elias_zoom" Value="0">0,9,1,9</ChannelsGroup>
+  <ChannelsGroup ID="14" Name="Cabeza_dimmer" Value="0">2,5,5,2</ChannelsGroup>
+  <ChannelsGroup ID="15" Name="Cabeza_rojo" Value="0">2,6,5,3</ChannelsGroup>
+  <ChannelsGroup ID="16" Name="Cabeza_verde" Value="0">2,7,5,4</ChannelsGroup>
+  <ChannelsGroup ID="17" Name="Cabeza_azul" Value="0">2,8,5,5</ChannelsGroup>
+  <ChannelsGroup ID="18" Name="Cabeza_blanca" Value="0">2,9,5,6</ChannelsGroup>
+  <ChannelsGroup ID="19" Name="Cabeza_ambar" Value="0">2,10,5,7</ChannelsGroup>
+  <ChannelsGroup ID="20" Name="Cabeza_uv" Value="0">2,11,5,8</ChannelsGroup>
+  <ChannelsGroup ID="21" Name="Bulbs_rojo" Value="0">6,0,7,0</ChannelsGroup>
+  <ChannelsGroup ID="22" Name="Bulbs_verde" Value="0">6,1,7,1</ChannelsGroup>
+  <ChannelsGroup ID="23" Name="Bulbs_azul" Value="0">6,2,7,2</ChannelsGroup>
+  <ChannelsGroup ID="24" Name="Bulbs_blanco" Value="0">6,3,7,3</ChannelsGroup>
+  <ChannelsGroup ID="25" Name="Bulbs_amarillo" Value="0">6,4,7,4</ChannelsGroup>
+  <Function ID="0" Type="RGBMatrix" Name="Efecto_monta">
+   <Speed FadeIn="0" FadeOut="0" Duration="800"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Noise</Algorithm>
+   <MonoColor>4294923520</MonoColor>
+   <EndColor>4294923647</EndColor>
+   <ControlMode>RGB</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+   <Property Name="noisePercentage" Value="High"/>
+  </Function>
+  <Function ID="1" Type="Scene" Name="Luces_elias_rojo">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,255,7,0,8,0,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,255,2,0,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,255,2,0,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="2" Type="Scene" Name="Luces_elias_verde">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,0,7,255,8,0,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,255,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,0,2,255,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="3" Type="Scene" Name="Luces_elias_azul">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,255,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,0,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="4" Type="Scene" Name="Luces_elias_blanca">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>13,0,12,0,11,0,10,0,9,255,8,0,7,0,6,0,5,77</ChannelGroupsVal>
+   <FixtureVal ID="0">0,77,1,0,2,0,3,0,4,255,5,0,6,0,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,77,1,0,2,0,3,0,4,255,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="5" Type="Scene" Name="Luces_elias_zoom">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>13,255</ChannelGroupsVal>
+   <FixtureVal ID="0">9,255</FixtureVal>
+   <FixtureVal ID="1">9,255</FixtureVal>
+  </Function>
+  <Function ID="6" Type="Scene" Name="Luces_elias_ambar">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,7,0,6,0,8,0,9,0,10,255,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,0,3,0,4,0,5,255,6,0,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,0,4,0,5,255,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="7" Type="Scene" Name="Luces_elias_uv">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,0,9,0,10,0,11,255,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,0,3,0,4,0,5,0,6,255,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,0,4,0,5,0,6,255,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="8" Type="Scene" Name="Luces_elias_strobe">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,12,255</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,7,255</FixtureVal>
+   <FixtureVal ID="1">0,255,7,255</FixtureVal>
+  </Function>
+  <Function ID="9" Type="Scene" Name="Interactive_viewer_amarillo">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="8">0,255,1,255</FixtureVal>
+  </Function>
+  <Function ID="10" Type="Chaser" Name="Blanco - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="3000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="Common"/>
+   <Step Number="0" FadeIn="3000" Hold="0" FadeOut="3000">4</Step>
+  </Function>
+  <Function ID="11" Type="Scene" Name="Luces_elias_intensidad">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>6,0,5,255,7,0,8,0,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="12" Type="RGBMatrix" Name="Efecto_celeste">
+   <Speed FadeIn="0" FadeOut="0" Duration="701"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Snow or Bubbles</Algorithm>
+   <MonoColor>4278255360</MonoColor>
+   <EndColor>4278233855</EndColor>
+   <ControlMode>RGB</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+   <Property Name="presetflakes" Value="20"/>
+  </Function>
+  <Function ID="13" Type="Scene" Name="Luz_2_elias_intensidad">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>6,0,5,255,7,0,8,0,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,0,4,0,5,0,6,0,7,0,8,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="14" Type="Scene" Name="Luz_2_elias_morado">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>13,0,12,0,11,0,10,0,9,0,8,255,7,0,6,255,5,255</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,1,255,2,0,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="15" Type="Chaser" Name="Rojo - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="3000" Hold="0" FadeOut="3000">1</Step>
+  </Function>
+  <Function ID="16" Type="Scene" Name="Luz_1_elias_ambar">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,7,0,6,0,8,0,9,0,10,255,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,0,3,0,4,0,5,255,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="17" Type="RGBMatrix" Name="Efecto multicolor">
+   <Speed FadeIn="0" FadeOut="0" Duration="300"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Random Pixel Per Row Multicolor</Algorithm>
+   <MonoColor>4278255360</MonoColor>
+   <EndColor>4278233855</EndColor>
+   <ControlMode>RGB</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+  </Function>
+  <Function ID="18" Type="Chaser" Name="Azul - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="3000" Hold="0" FadeOut="3000">3</Step>
+  </Function>
+  <Function ID="19" Type="Scene" Name="Cabeza_ambar_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,0,17,0,18,0,19,255,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,0,7,0,8,0,9,0,10,255,11,0</FixtureVal>
+  </Function>
+  <Function ID="20" Type="Collection" Name="Verde">
+   <Step Number="0">34</Step>
+   <Step Number="1">88</Step>
+   <Step Number="2">107</Step>
+   <Step Number="3">147</Step>
+   <Step Number="4">154</Step>
+  </Function>
+  <Function ID="21" Type="Scene" Name="Luces_elias_amarillo">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,6,255,7,255,8,0,10,0,9,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,255,2,255,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,255,2,255,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="22" Type="Chaser" Name="Amarillo - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="3000" Hold="0" FadeOut="3000">21</Step>
+  </Function>
+  <Function ID="23" Type="Scene" Name="Cabeza_rosada">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,0,17,32,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,255,7,0,8,32,9,0,10,0,11,0</FixtureVal>
+   <FixtureVal ID="5">2,255,3,255,4,0,5,32,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="24" Type="Collection" Name="Rojo">
+   <Step Number="0">15</Step>
+   <Step Number="1">74</Step>
+   <Step Number="2">114</Step>
+   <Step Number="3">51</Step>
+   <Step Number="4">61</Step>
+  </Function>
+  <Function ID="25" Type="Collection" Name="Azul">
+   <Step Number="0">18</Step>
+   <Step Number="1">64</Step>
+   <Step Number="2">104</Step>
+   <Step Number="3">146</Step>
+   <Step Number="4">63</Step>
+  </Function>
+  <Function ID="26" Type="Collection" Name="Amarillo">
+   <Step Number="0">22</Step>
+   <Step Number="1">76</Step>
+   <Step Number="2">116</Step>
+   <Step Number="3">152</Step>
+   <Step Number="4">9</Step>
+  </Function>
+  <Function ID="27" Type="RGBMatrix" Name="Efecto multicolor_gradiente">
+   <Speed FadeIn="0" FadeOut="0" Duration="300"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Gradient</Algorithm>
+   <MonoColor>4278255360</MonoColor>
+   <EndColor>4278233855</EndColor>
+   <ControlMode>RGB</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+   <Property Name="presetSize" Value="4"/>
+  </Function>
+  <Function ID="28" Type="Chaser" Name="Ambar - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="3000" Hold="0" FadeOut="3000">6</Step>
+  </Function>
+  <Function ID="29" Type="Chaser" Name="UV - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="2000" Hold="0" FadeOut="2000">7</Step>
+  </Function>
+  <Function ID="30" Type="Scene" Name="Luces_elias_morado">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>13,0,12,0,11,0,10,0,9,0,8,255,7,0,6,255,5,28</ChannelGroupsVal>
+   <FixtureVal ID="0">0,28,1,255,2,0,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,28,1,255,2,0,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="31" Type="Scene" Name="Luces_elias_celeste">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,150,6,0,7,255,8,255,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,150,1,0,2,255,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,150,1,0,2,255,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="32" Type="Chaser" Name="Celeste - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="3000" Hold="0" FadeOut="3000">31</Step>
+  </Function>
+  <Function ID="33" Type="Chaser" Name="Morado - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="3000" FadeOut="0">30</Step>
+  </Function>
+  <Function ID="34" Type="Chaser" Name="Verde - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="3000" Hold="0" FadeOut="3000">2</Step>
+  </Function>
+  <Function ID="35" Type="Collection" Name="Blanco">
+   <Step Number="0">10</Step>
+   <Step Number="1">83</Step>
+   <Step Number="2">117</Step>
+   <Step Number="3">150</Step>
+   <Step Number="4">160</Step>
+  </Function>
+  <Function ID="36" Type="Scene" Name="Luces_elias_blanca_strobe">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,0,9,255,10,0,11,0,12,255,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,0,3,0,4,255,5,0,6,0,7,255,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,0,4,255,5,0,6,0,7,255,9,0</FixtureVal>
+  </Function>
+  <Function ID="37" Type="Collection" Name="Celeste">
+   <Step Number="0">32</Step>
+   <Step Number="1">108</Step>
+   <Step Number="2">89</Step>
+   <Step Number="3">149</Step>
+   <Step Number="4">155</Step>
+  </Function>
+  <Function ID="38" Type="Collection" Name="Morado">
+   <Step Number="0">33</Step>
+   <Step Number="1">98</Step>
+   <Step Number="2">110</Step>
+   <Step Number="3">151</Step>
+   <Step Number="4">161</Step>
+  </Function>
+  <Function ID="39" Type="Collection" Name="Ambar">
+   <Step Number="0">6</Step>
+   <Step Number="1">40</Step>
+   <Step Number="2">148</Step>
+   <Step Number="3">174</Step>
+  </Function>
+  <Function ID="40" Type="Scene" Name="Cabeza_ambar">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <ChannelGroupsVal>14,150,15,0,16,0,17,0,18,0,19,255,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,150,6,0,7,0,8,0,9,0,10,255,11,0</FixtureVal>
+   <FixtureVal ID="5">2,150,3,0,4,0,5,0,6,0,7,255,8,0</FixtureVal>
+  </Function>
+  <Function ID="41" Type="RGBMatrix" Name="Efecto_rojo">
+   <Speed FadeIn="0" FadeOut="0" Duration="701"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Gradient</Algorithm>
+   <MonoColor>4278255360</MonoColor>
+   <EndColor>4278233600</EndColor>
+   <ControlMode>RGB</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+   <Property Name="presetIndex" Value="Sunset"/>
+   <Property Name="presetSize" Value="5"/>
+  </Function>
+  <Function ID="42" Type="RGBMatrix" Name="Efecto_verde">
+   <Speed FadeIn="0" FadeOut="0" Duration="701"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Snow or Bubbles</Algorithm>
+   <MonoColor>4278255360</MonoColor>
+   <EndColor>4278233600</EndColor>
+   <ControlMode>RGB</ControlMode>
+   <FixtureGroup>0</FixtureGroup>
+   <Property Name="presetflakes" Value="20"/>
+  </Function>
+  <Function ID="43" Type="Scene" Name="Luces_elias_rosado">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,255,7,0,8,32,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,255,2,0,3,32,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,255,2,0,3,32,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="44" Type="Chaser" Name="Rosado - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="3000" Hold="0" FadeOut="3000">43</Step>
+  </Function>
+  <Function ID="45" Type="Collection" Name="Rosado">
+   <Step Number="0">44</Step>
+   <Step Number="1">23</Step>
+   <Step Number="2">101</Step>
+   <Step Number="3">162</Step>
+  </Function>
+  <Function ID="46" Type="Scene" Name="Cabeza_uv">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,0,17,0,18,0,19,0,20,255</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,0,7,0,8,0,9,0,10,0,11,255</FixtureVal>
+   <FixtureVal ID="5">2,255,3,0,4,0,5,0,6,0,7,0,8,255</FixtureVal>
+  </Function>
+  <Function ID="47" Type="Collection" Name="UV">
+   <Step Number="0">29</Step>
+   <Step Number="1">46</Step>
+   <Step Number="2">151</Step>
+   <Step Number="3">161</Step>
+  </Function>
+  <Function ID="48" Type="Scene" Name="Luces_elias_negro">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,0,10,0,9,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,0,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="49" Type="Chaser" Name="Negro - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="6000">48</Step>
+  </Function>
+  <Function ID="50" Type="Collection" Name="Negro">
+   <Step Number="0">49</Step>
+   <Step Number="1">102</Step>
+   <Step Number="2">85</Step>
+   <Step Number="3">153</Step>
+   <Step Number="4">158</Step>
+  </Function>
+  <Function ID="51" Type="Scene" Name="Bulbs_rojo">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <ChannelGroupsVal>21,255,22,0,23,0,24,0,25,0</ChannelGroupsVal>
+   <FixtureVal ID="6">0,255,1,0,2,0,3,0,4,0</FixtureVal>
+   <FixtureVal ID="7">0,255,1,0,2,0,3,0,4,0</FixtureVal>
+  </Function>
+  <Function ID="52" Type="Scene" Name="Cabeza_ambar_tnt">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,0,17,0,18,0,19,255,20,0</ChannelGroupsVal>
+   <FixtureVal ID="5">2,255,3,0,4,0,5,0,6,0,7,255,8,0</FixtureVal>
+  </Function>
+  <Function ID="53" Type="Scene" Name="TNT_amarillo_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,255,2,255,3,0</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,255,5,255,6,0</FixtureVal>
+  </Function>
+  <Function ID="54" Type="Scene" Name="TNT_morado_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>4,0,3,255,2,0,1,255,0,255</ChannelGroupsVal>
+   <FixtureVal ID="4">3,255,4,255,5,0,6,255</FixtureVal>
+  </Function>
+  <Function ID="55" Type="Scene" Name="TNT_morado_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>4,0,3,255,2,0,1,255,0,255</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,255,5,0,6,255,7,0</FixtureVal>
+  </Function>
+  <Function ID="56" Type="Scene" Name="TNT_amarillo_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,255,2,255,3,0</ChannelGroupsVal>
+   <FixtureVal ID="4">3,255,4,255,5,255,6,0</FixtureVal>
+  </Function>
+  <Function ID="57" Type="Scene" Name="Cabeza_morada_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,0,17,255,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,255,7,0,8,255,9,0,10,0,11,0</FixtureVal>
+  </Function>
+  <Function ID="58" Type="Scene" Name="Luz_1_elias_intensidad">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255</FixtureVal>
+  </Function>
+  <Function ID="59" Type="Scene" Name="Cabeza_intensidad">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255</FixtureVal>
+   <FixtureVal ID="5">2,255</FixtureVal>
+  </Function>
+  <Function ID="60" Type="Scene" Name="TNT_intensidad">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255</FixtureVal>
+   <FixtureVal ID="4">3,255</FixtureVal>
+  </Function>
+  <Function ID="61" Type="Scene" Name="Interactive_viewer_rojo">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="8">0,255</FixtureVal>
+  </Function>
+  <Function ID="62" Type="Scene" Name="TNT_blanco_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,0,2,0,3,0,4,255</ChannelGroupsVal>
+   <FixtureVal ID="4">3,255,4,0,5,0,6,0,7,255</FixtureVal>
+  </Function>
+  <Function ID="63" Type="Scene" Name="Interactive_viewer_azul">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="8">2,255</FixtureVal>
+  </Function>
+  <Function ID="64" Type="Scene" Name="TNT_azul">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,0,2,0,3,255</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,0,5,0,6,255</FixtureVal>
+   <FixtureVal ID="4">3,255,4,0,5,0,6,255</FixtureVal>
+  </Function>
+  <Function ID="65" Type="Scene" Name="Cabeza_celeste_tnt">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,255,17,255,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="5">2,255,3,0,4,255,5,255,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="66" Type="Collection" Name="Celeste_Soledad">
+   <Step Number="0">32</Step>
+   <Step Number="1">89</Step>
+   <Step Number="2">71</Step>
+   <Step Number="3">72</Step>
+   <Step Number="4">149</Step>
+  </Function>
+  <Function ID="67" Type="Scene" Name="TNT_celeste_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,0,2,128,3,128</ChannelGroupsVal>
+   <FixtureVal ID="4">3,255,4,0,5,128,6,128</FixtureVal>
+  </Function>
+  <Function ID="68" Type="Scene" Name="TNT_rosado_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>4,0,3,32,2,0,1,255,0,255</ChannelGroupsVal>
+   <FixtureVal ID="4">3,255,4,255,5,0,6,32</FixtureVal>
+  </Function>
+  <Function ID="69" Type="Scene" Name="TNT_rosado_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>4,0,3,32,2,0,1,255,0,255</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,255,5,0,6,32,7,0</FixtureVal>
+  </Function>
+  <Function ID="70" Type="Scene" Name="Cabeza_azul_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,0,17,255,19,0,18,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,0,7,0,8,255,9,0,10,0,11,0</FixtureVal>
+  </Function>
+  <Function ID="71" Type="Scene" Name="Cabeza_azul_tnt">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,0,17,255,19,0,18,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="5">2,255,3,0,4,0,5,255,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="72" Type="Scene" Name="Cabeza_celeste_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,255,17,255,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,0,7,255,8,255,9,0,10,0,11,0</FixtureVal>
+  </Function>
+  <Function ID="73" Type="Collection" Name="Presidente">
+   <Step Number="0">76</Step>
+   <Step Number="1">22</Step>
+   <Step Number="2">107</Step>
+   <Step Number="3">152</Step>
+  </Function>
+  <Function ID="74" Type="Scene" Name="TNT_rojo">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,255,2,0,3,0</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,255,5,0,6,0</FixtureVal>
+   <FixtureVal ID="4">3,255,4,255,5,0,6,0</FixtureVal>
+  </Function>
+  <Function ID="75" Type="Scene" Name="Luz_1_elias_amarillo">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,6,255,7,255,8,0,10,0,9,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,255,2,255,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="76" Type="Scene" Name="TNT_amarillo">
+   <Speed FadeIn="1000" FadeOut="1000" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,255,2,255,3,0</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,255,5,255,6,0</FixtureVal>
+   <FixtureVal ID="4">3,255,4,255,5,255,6,0</FixtureVal>
+  </Function>
+  <Function ID="77" Type="Scene" Name="Luz_2_elias_amarillo">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,6,255,7,255,8,0,10,0,9,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,1,255,2,255,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="78" Type="Scene" Name="Luz_2_elias_ambar">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,7,0,6,0,8,0,9,0,10,255,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,0,4,0,5,255,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="79" Type="Scene" Name="Luz_1_elias_azul">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,255,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,0,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="80" Type="Scene" Name="Luz_2_elias_azul">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,255,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="81" Type="Scene" Name="Luz_2_elias_blanca">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>13,0,12,0,11,0,10,0,9,255,8,0,7,0,6,0,5,77</ChannelGroupsVal>
+   <FixtureVal ID="1">0,77,1,0,2,0,3,0,4,255,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="82" Type="Scene" Name="Luz_1_elias_blanca">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>13,0,12,0,11,0,10,0,9,255,8,0,7,0,6,0,5,77</ChannelGroupsVal>
+   <FixtureVal ID="0">0,77,1,0,2,0,3,0,4,255,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="83" Type="Scene" Name="TNT_blanco">
+   <Speed FadeIn="1000" FadeOut="1000" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,0,2,0,3,0,4,255</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,0,5,0,6,0,7,255</FixtureVal>
+   <FixtureVal ID="4">3,255,4,0,5,0,6,0,7,255</FixtureVal>
+  </Function>
+  <Function ID="84" Type="Scene" Name="Luz_2_elias_blanca_strobe">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,0,9,255,10,0,11,0,12,255,13,0</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,0,4,255,5,0,6,0,7,255,9,0</FixtureVal>
+  </Function>
+  <Function ID="85" Type="Scene" Name="TNT_negro">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <ChannelGroupsVal>4,0,3,0,2,0,1,0,0,0</ChannelGroupsVal>
+   <FixtureVal ID="3">3,0,4,0,5,0,6,0,7,0</FixtureVal>
+   <FixtureVal ID="4">3,0,4,0,5,0,6,0</FixtureVal>
+  </Function>
+  <Function ID="86" Type="Scene" Name="Luz_1_elias_blanca_strobe">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,0,9,255,10,0,11,0,12,255,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,0,3,0,4,255,5,0,6,0,7,255,9,0</FixtureVal>
+  </Function>
+  <Function ID="87" Type="Scene" Name="Luz_2_elias_celeste">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,21,6,0,7,255,8,255,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="1">0,21,1,0,2,255,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="88" Type="Scene" Name="TNT_verde">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,0,2,255,3,0</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,0,5,255,6,0</FixtureVal>
+   <FixtureVal ID="4">3,255,4,0,5,255,6,0</FixtureVal>
+  </Function>
+  <Function ID="89" Type="Scene" Name="TNT_celeste">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <ChannelGroupsVal>0,200,1,0,2,255,3,255</ChannelGroupsVal>
+   <FixtureVal ID="3">3,200,4,0,5,255,6,255</FixtureVal>
+   <FixtureVal ID="4">3,200,4,0,5,255,6,255</FixtureVal>
+  </Function>
+  <Function ID="90" Type="Scene" Name="Luz_1_elias_celeste">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,21,6,0,7,255,8,255,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,21,1,0,2,255,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="91" Type="Scene" Name="Luz_2_elias_verde">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,0,7,255,8,0,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,1,0,2,255,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="92" Type="Scene" Name="Luz_1_elias_verde">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,0,7,255,8,0,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,255,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="93" Type="Scene" Name="Luz_1_elias_morado">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>13,0,12,0,11,0,10,0,9,0,8,255,7,0,6,255,5,28</ChannelGroupsVal>
+   <FixtureVal ID="0">0,28,1,255,2,0,3,255,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="94" Type="Scene" Name="Luz_1_elias_negro">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,0,10,0,9,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,0,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="95" Type="Scene" Name="Luz_2_elias_negro">
+   <Speed FadeIn="50" FadeOut="0" Duration="25"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,0,10,0,9,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="96" Type="Scene" Name="Luz_1_elias_rojo">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,255,7,0,8,0,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,255,2,0,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="97" Type="Scene" Name="Luz_2_elias_rojo">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,255,7,0,8,0,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,1,255,2,0,3,0,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="98" Type="Scene" Name="TNT_morado">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>4,0,3,255,2,0,1,255,0,78</ChannelGroupsVal>
+   <FixtureVal ID="3">3,78,4,255,5,0,6,255,7,0</FixtureVal>
+   <FixtureVal ID="4">3,78,4,255,5,0,6,255</FixtureVal>
+  </Function>
+  <Function ID="99" Type="Scene" Name="Luz_2_elias_rosado">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,255,7,0,8,32,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,1,255,2,0,3,32,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="100" Type="Scene" Name="Luz_1_elias_rosado">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,255,7,0,8,32,9,0,10,0,11,0,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,255,2,0,3,32,4,0,5,0,6,0,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="101" Type="Scene" Name="TNT_rosado">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>4,0,3,32,2,0,1,255,0,255</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,255,5,0,6,32,7,0</FixtureVal>
+   <FixtureVal ID="4">3,255,4,255,5,0,6,32</FixtureVal>
+  </Function>
+  <Function ID="102" Type="Scene" Name="Cabeza_negro">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <ChannelGroupsVal>14,0,15,0,16,0,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,0,6,0,7,0,8,0,9,0,10,0,11,0</FixtureVal>
+   <FixtureVal ID="5">2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="103" Type="Scene" Name="Luz_2_elias_strobe">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,12,255</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,7,255</FixtureVal>
+  </Function>
+  <Function ID="104" Type="Scene" Name="Cabeza_azul">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,0,17,255,19,0,18,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,0,7,0,8,255,9,0,10,0,11,0</FixtureVal>
+   <FixtureVal ID="5">2,255,3,0,4,0,5,255,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="105" Type="Scene" Name="Luz_1_elias_strobe">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,12,255</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,7,255</FixtureVal>
+  </Function>
+  <Function ID="106" Type="Scene" Name="Luz_2_elias_uv">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,0,9,0,10,0,11,255,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="1">0,255,1,0,2,0,3,0,4,0,5,0,6,255,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="107" Type="Scene" Name="Cabeza_verde">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,255,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,0,7,255,8,0,9,0,10,0,11,0</FixtureVal>
+   <FixtureVal ID="5">2,255,3,0,4,255,5,0,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="108" Type="Scene" Name="Cabeza_celeste">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,255,17,255,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,0,7,255,8,255,9,0,10,0,11,0</FixtureVal>
+   <FixtureVal ID="5">2,255,3,0,4,255,5,255,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="109" Type="Scene" Name="Luz_1_elias_uv">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>5,255,6,0,7,0,8,0,9,0,10,0,11,255,12,0,13,0</ChannelGroupsVal>
+   <FixtureVal ID="0">0,255,1,0,2,0,3,0,4,0,5,0,6,255,7,0,9,0</FixtureVal>
+  </Function>
+  <Function ID="110" Type="Scene" Name="Cabeza_morada">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,0,17,255,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,255,7,0,8,255,9,0,10,0,11,0</FixtureVal>
+   <FixtureVal ID="5">2,255,3,255,4,0,5,255,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="111" Type="Scene" Name="TNT_azul_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,0,2,0,3,255</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,0,5,0,6,255</FixtureVal>
+  </Function>
+  <Function ID="112" Type="Scene" Name="TNT_azul_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,0,2,0,3,255</ChannelGroupsVal>
+   <FixtureVal ID="4">3,255,4,0,5,0,6,255</FixtureVal>
+  </Function>
+  <Function ID="113" Type="Scene" Name="TNT_blanco_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,0,2,0,3,0,4,255</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,0,5,0,6,0,7,255</FixtureVal>
+  </Function>
+  <Function ID="114" Type="Scene" Name="Cabeza_roja">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,0,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,255,7,0,8,0,9,0,10,0,11,0</FixtureVal>
+   <FixtureVal ID="5">2,255,3,255,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="115" Type="Scene" Name="TNT_celeste_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,0,2,128,3,128</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,0,5,128,6,128</FixtureVal>
+  </Function>
+  <Function ID="116" Type="Scene" Name="Cabeza_amarillo">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,255,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,255,7,255,8,0,9,0,10,0,11,0</FixtureVal>
+   <FixtureVal ID="5">2,255,3,255,4,255,5,0,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="117" Type="Scene" Name="Cabeza_blanca">
+   <Speed FadeIn="2000" FadeOut="2000" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,0,17,0,18,255,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,0,7,0,8,0,9,255,10,0,11,0</FixtureVal>
+   <FixtureVal ID="5">2,255,3,0,4,0,5,0,6,255,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="118" Type="Scene" Name="TNT_intensidad_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255</ChannelGroupsVal>
+   <FixtureVal ID="4">3,255</FixtureVal>
+  </Function>
+  <Function ID="119" Type="Scene" Name="TNT_intensidad_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255</FixtureVal>
+  </Function>
+  <Function ID="120" Type="Scene" Name="TNT_negro_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>4,0,3,0,2,0,1,0,0,0</ChannelGroupsVal>
+   <FixtureVal ID="3">3,0,4,0,5,0,6,0,7,0</FixtureVal>
+  </Function>
+  <Function ID="121" Type="Scene" Name="TNT_negro_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>4,0,3,0,2,0,1,0,0,0</ChannelGroupsVal>
+   <FixtureVal ID="4">3,0,4,0,5,0,6,0</FixtureVal>
+  </Function>
+  <Function ID="122" Type="Scene" Name="TNT_rojo_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,255,2,0,3,0</ChannelGroupsVal>
+   <FixtureVal ID="4">3,255,4,255,5,0,6,0</FixtureVal>
+  </Function>
+  <Function ID="123" Type="Chaser" Name="Blanco_strobe - elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">4</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">8</Step>
+  </Function>
+  <Function ID="124" Type="Scene" Name="TNT_rojo_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,255,2,0,3,0</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,255,5,0,6,0</FixtureVal>
+  </Function>
+  <Function ID="125" Type="Scene" Name="TNT_verde_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,0,2,255,3,0</ChannelGroupsVal>
+   <FixtureVal ID="3">3,255,4,0,5,255,6,0</FixtureVal>
+  </Function>
+  <Function ID="126" Type="Scene" Name="TNT_verde_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>0,255,1,0,2,255,3,0</ChannelGroupsVal>
+   <FixtureVal ID="4">3,255,4,0,5,255,6,0</FixtureVal>
+  </Function>
+  <Function ID="127" Type="Scene" Name="Cabeza_amarillo_tnt">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,255,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="5">2,255,3,255,4,255,5,0,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="128" Type="Scene" Name="Cabeza_amarillo_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,255,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,255,7,255,8,0,9,0,10,0,11,0</FixtureVal>
+  </Function>
+  <Function ID="129" Type="Scene" Name="Cabeza_blanca_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,0,17,0,18,255,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,0,7,0,8,0,9,255,10,0,11,0</FixtureVal>
+  </Function>
+  <Function ID="130" Type="Scene" Name="Cabeza_blanca_tnt">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,0,17,0,18,255,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="5">2,255,3,0,4,0,5,0,6,255,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="131" Type="Scene" Name="Cabeza_intensidad_tnt">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255</ChannelGroupsVal>
+   <FixtureVal ID="5">2,255</FixtureVal>
+  </Function>
+  <Function ID="132" Type="Scene" Name="Cabeza_intensidad_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255</FixtureVal>
+  </Function>
+  <Function ID="133" Type="Scene" Name="Cabeza_morada_tnt">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,0,17,255,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="5">2,255,3,255,4,0,5,255,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="134" Type="Scene" Name="Cabeza_negro_tnt">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,0,15,0,16,0,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="5">2,0,3,0,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="135" Type="Scene" Name="Cabeza_negro_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,0,15,0,16,0,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,0,6,0,7,0,8,0,9,0,10,0,11,0</FixtureVal>
+  </Function>
+  <Function ID="136" Type="Scene" Name="Cabeza_roja_tnt">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,0,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="5">2,255,3,255,4,0,5,0,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="137" Type="Scene" Name="Cabeza_roja_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,0,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,255,7,0,8,0,9,0,10,0,11,0</FixtureVal>
+  </Function>
+  <Function ID="138" Type="Scene" Name="Cabeza_rosada_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,0,17,32,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,255,7,0,8,32,9,0,10,0,11,0</FixtureVal>
+  </Function>
+  <Function ID="139" Type="Scene" Name="Cabeza_rosada_tnt">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,255,16,0,17,32,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="5">2,255,3,255,4,0,5,32,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="140" Type="Scene" Name="Cabeza_uv_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,0,17,0,18,0,19,0,20,255</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,0,7,0,8,0,9,0,10,0,11,255</FixtureVal>
+  </Function>
+  <Function ID="141" Type="Scene" Name="Cabeza_uv_tnt">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,0,17,0,18,0,19,0,20,255</ChannelGroupsVal>
+   <FixtureVal ID="5">2,255,3,0,4,0,5,0,6,0,7,0,8,255</FixtureVal>
+  </Function>
+  <Function ID="142" Type="Scene" Name="Cabeza_verde_elias">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,255,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="2">5,255,6,0,7,255,8,0,9,0,10,0,11,0</FixtureVal>
+  </Function>
+  <Function ID="143" Type="Scene" Name="Cabeza_verde_tnt">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <ChannelGroupsVal>14,255,15,0,16,255,17,0,18,0,19,0,20,0</ChannelGroupsVal>
+   <FixtureVal ID="5">2,255,3,0,4,255,5,0,6,0,7,0,8,0</FixtureVal>
+  </Function>
+  <Function ID="144" Type="EFX" Name="Prueba_cabeza_elias">
+   <Fixture>
+    <ID>2</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <PropagationMode>Parallel</PropagationMode>
+   <Speed FadeIn="0" FadeOut="0" Duration="20000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm>Diamond</Algorithm>
+   <Width>127</Width>
+   <Height>127</Height>
+   <Rotation>0</Rotation>
+   <StartOffset>0</StartOffset>
+   <IsRelative>0</IsRelative>
+   <Axis Name="X">
+    <Offset>127</Offset>
+    <Frequency>2</Frequency>
+    <Phase>90</Phase>
+   </Axis>
+   <Axis Name="Y">
+    <Offset>127</Offset>
+    <Frequency>3</Frequency>
+    <Phase>0</Phase>
+   </Axis>
+  </Function>
+  <Function ID="145" Type="EFX" Name="Prueba_cabeza_TNT">
+   <Fixture>
+    <ID>5</ID>
+    <Head>0</Head>
+    <Mode>0</Mode>
+    <Direction>Forward</Direction>
+    <StartOffset>0</StartOffset>
+   </Fixture>
+   <PropagationMode>Parallel</PropagationMode>
+   <Speed FadeIn="0" FadeOut="0" Duration="20000"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm>Line</Algorithm>
+   <Width>127</Width>
+   <Height>127</Height>
+   <Rotation>0</Rotation>
+   <StartOffset>0</StartOffset>
+   <IsRelative>0</IsRelative>
+   <Axis Name="X">
+    <Offset>127</Offset>
+    <Frequency>2</Frequency>
+    <Phase>90</Phase>
+   </Axis>
+   <Axis Name="Y">
+    <Offset>127</Offset>
+    <Frequency>3</Frequency>
+    <Phase>0</Phase>
+   </Axis>
+  </Function>
+  <Function ID="146" Type="Scene" Name="Bulbs_azul">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <ChannelGroupsVal>21,0,22,0,23,255,24,0,25,0</ChannelGroupsVal>
+   <FixtureVal ID="6">0,0,1,0,2,255,3,0,4,0</FixtureVal>
+   <FixtureVal ID="7">0,0,1,0,2,255,3,0,4,0</FixtureVal>
+  </Function>
+  <Function ID="147" Type="Scene" Name="Bulbs_verde">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <ChannelGroupsVal>21,0,22,255,23,0,24,0,25,0</ChannelGroupsVal>
+   <FixtureVal ID="6">0,0,1,255,2,0,3,0,4,0</FixtureVal>
+   <FixtureVal ID="7">0,0,1,255,2,0,3,0,4,0</FixtureVal>
+  </Function>
+  <Function ID="148" Type="Scene" Name="Bulbs_naranja">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <ChannelGroupsVal>21,255,22,128,23,0,24,0,25,0</ChannelGroupsVal>
+   <FixtureVal ID="6">0,255,1,128,2,0,3,0,4,0</FixtureVal>
+   <FixtureVal ID="7">0,255,1,128,2,0,3,0,4,0</FixtureVal>
+  </Function>
+  <Function ID="149" Type="Scene" Name="Bulbs_celeste">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <ChannelGroupsVal>21,0,22,255,23,255,24,0,25,0</ChannelGroupsVal>
+   <FixtureVal ID="6">0,0,1,255,2,255,3,0,4,0</FixtureVal>
+   <FixtureVal ID="7">0,0,1,255,2,255,3,0,4,0</FixtureVal>
+  </Function>
+  <Function ID="150" Type="Scene" Name="Bulbs_blanco">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <ChannelGroupsVal>21,0,22,0,23,0,24,255,25,0</ChannelGroupsVal>
+   <FixtureVal ID="6">0,0,1,0,2,0,3,255,4,0</FixtureVal>
+   <FixtureVal ID="7">0,0,1,0,2,0,3,255,4,0</FixtureVal>
+  </Function>
+  <Function ID="151" Type="Scene" Name="Bulbs_morado">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <ChannelGroupsVal>21,255,22,0,23,255,24,0,25,0</ChannelGroupsVal>
+   <FixtureVal ID="6">0,255,1,0,2,255,3,0,4,0</FixtureVal>
+   <FixtureVal ID="7">0,255,1,0,2,255,3,0,4,0</FixtureVal>
+  </Function>
+  <Function ID="152" Type="Scene" Name="Bulbs_amarillo">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <ChannelGroupsVal>21,0,22,0,23,0,24,0,25,255</ChannelGroupsVal>
+   <FixtureVal ID="6">0,0,1,0,2,0,3,0,4,255</FixtureVal>
+   <FixtureVal ID="7">0,0,1,0,2,0,3,0,4,255</FixtureVal>
+  </Function>
+  <Function ID="153" Type="Scene" Name="Bulbs_negro">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <ChannelGroupsVal>21,0,22,0,23,0,24,0,25,0</ChannelGroupsVal>
+   <FixtureVal ID="6">0,0,1,0,2,0,3,0,4,0</FixtureVal>
+   <FixtureVal ID="7">0,0,1,0,2,0,3,0,4,0</FixtureVal>
+  </Function>
+  <Function ID="154" Type="Scene" Name="Interactive_viewer_verde">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="8">1,255</FixtureVal>
+  </Function>
+  <Function ID="155" Type="Scene" Name="Interactive_viewer_celeste">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="8">1,255,2,255</FixtureVal>
+  </Function>
+  <Function ID="156" Type="Chaser" Name="Interactive_viewer_mar">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="2000" FadeOut="0">63</Step>
+   <Step Number="1" FadeIn="0" Hold="2000" FadeOut="0">155</Step>
+  </Function>
+  <Function ID="157" Type="Collection" Name="Escena_3_Mar">
+   <Step Number="0">90</Step>
+   <Step Number="1">87</Step>
+   <Step Number="2">156</Step>
+   <Step Number="3">177</Step>
+  </Function>
+  <Function ID="158" Type="Scene" Name="Interactive_viewer_negro">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="8"/>
+  </Function>
+  <Function ID="159" Type="Chaser" Name="Interactive_viewer_arcoiris">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="2000" FadeOut="0">9</Step>
+   <Step Number="1" FadeIn="0" Hold="2000" FadeOut="0">63</Step>
+   <Step Number="2" FadeIn="0" Hold="2000" FadeOut="0">160</Step>
+   <Step Number="3" FadeIn="0" Hold="2000" FadeOut="0">155</Step>
+   <Step Number="4" FadeIn="0" Hold="2000" FadeOut="0">161</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">163</Step>
+   <Step Number="6" FadeIn="0" Hold="2000" FadeOut="0">61</Step>
+   <Step Number="7" FadeIn="0" Hold="2000" FadeOut="0">162</Step>
+   <Step Number="8" FadeIn="0" Hold="2000" FadeOut="0">154</Step>
+  </Function>
+  <Function ID="160" Type="Scene" Name="Interactive_viewer_blanco">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="8">0,255,1,255,2,255</FixtureVal>
+  </Function>
+  <Function ID="161" Type="Scene" Name="Interactive_viewer_morado">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="8">0,255,2,255</FixtureVal>
+  </Function>
+  <Function ID="162" Type="Scene" Name="Interactive_viewer_rosado">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="8">0,255,2,70</FixtureVal>
+  </Function>
+  <Function ID="163" Type="Scene" Name="Interactive_viewer_naranja">
+   <Speed FadeIn="3000" FadeOut="3000" Duration="0"/>
+   <FixtureVal ID="8">0,255,1,128</FixtureVal>
+  </Function>
+  <Function ID="164" Type="Scene" Name="Interactive_viewer_effect_flash">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,255</FixtureVal>
+  </Function>
+  <Function ID="165" Type="Scene" Name="Interactive_viewer_effect_sounds_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,70</FixtureVal>
+  </Function>
+  <Function ID="166" Type="Scene" Name="Interactive_viewer_effect_random_color">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,50</FixtureVal>
+  </Function>
+  <Function ID="167" Type="Chaser" Name="Interactive_viewer_random_color">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="500" FadeOut="0">166</Step>
+   <Step Number="1" FadeIn="0" Hold="500" FadeOut="0">168</Step>
+  </Function>
+  <Function ID="168" Type="Scene" Name="Interactive_viewer_effect_keep_color">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,51</FixtureVal>
+  </Function>
+  <Function ID="169" Type="Chaser" Name="Interactive_viewer_random_sounds_1">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="1000" FadeOut="0">165</Step>
+   <Step Number="1" FadeIn="0" Hold="1000" FadeOut="0">168</Step>
+  </Function>
+  <Function ID="170" Type="Collection" Name="Escena1_Bosque">
+   <Step Number="0">20</Step>
+   <Step Number="1">169</Step>
+  </Function>
+  <Function ID="171" Type="Scene" Name="Interactive_viewer_effect_random_images">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,60</FixtureVal>
+  </Function>
+  <Function ID="172" Type="Scene" Name="Interactive_viewer_effect_clean_images">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,61</FixtureVal>
+  </Function>
+  <Function ID="173" Type="Chaser" Name="Interactive_viewer_random_images">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="1000" FadeOut="0">171</Step>
+   <Step Number="1" FadeIn="0" Hold="1000" FadeOut="0">172</Step>
+  </Function>
+  <Function ID="174" Type="Chaser" Name="Interactive_viewer_feliz">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="1000" FadeOut="0">163</Step>
+   <Step Number="1" FadeIn="0" Hold="1000" FadeOut="0">9</Step>
+   <Step Number="2" FadeIn="0" Hold="1000" FadeOut="0">160</Step>
+  </Function>
+  <Function ID="175" Type="Scene" Name="Interactive_viewer_effect_vibration">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,10</FixtureVal>
+  </Function>
+  <Function ID="176" Type="Scene" Name="Interactive_viewer_none">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,5</FixtureVal>
+  </Function>
+  <Function ID="177" Type="Chaser" Name="Interactive_viewer_random_vibration">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="1000" FadeOut="0">165</Step>
+   <Step Number="1" FadeIn="0" Hold="700" FadeOut="0">175</Step>
+   <Step Number="2" FadeIn="0" Hold="700" FadeOut="0">176</Step>
+  </Function>
+  <Function ID="178" Type="Scene" Name="Interactive_viewer_effect_sounds_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="8">3,80</FixtureVal>
+  </Function>
+  <Function ID="179" Type="Chaser" Name="Interactive_viewer_random_sounds_2">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="1000" FadeOut="0">178</Step>
+   <Step Number="1" FadeIn="0" Hold="1000" FadeOut="0">168</Step>
+  </Function>
+  <Monitor DisplayMode="1" ShowLabels="0">
+   <Font>Arial,12,-1,5,50,0,0,0,0,0</Font>
+   <ChannelStyle>0</ChannelStyle>
+   <ValueStyle>0</ValueStyle>
+   <Grid Width="5" Height="3" Depth="5" Units="0"/>
+   <FxItem ID="0" XPos="0" YPos="3676.14"/>
+   <FxItem ID="1" XPos="3857.95" YPos="1125"/>
+   <FxItem ID="2" XPos="17.0455" YPos="500"/>
+   <FxItem ID="3" XPos="3852.27" YPos="3926.14"/>
+   <FxItem ID="4" XPos="3863.64" YPos="3545.45"/>
+   <FxItem ID="5" XPos="2227.27" YPos="5.68182"/>
+  </Monitor>
+ </Engine>
+ <VirtualConsole>
+  <Frame Caption="">
+   <Appearance>
+    <FrameStyle>None</FrameStyle>
+    <ForegroundColor>Default</ForegroundColor>
+    <BackgroundColor>Default</BackgroundColor>
+    <BackgroundImage>None</BackgroundImage>
+    <Font>Default</Font>
+   </Appearance>
+   <Frame Caption="Luces propuesta &quot;Canción Música&quot;" ID="3">
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>MS Shell Dlg 2,14,-1,5,75,0,0,0,0,0</Font>
+    </Appearance>
+    <WindowState Visible="False" X="165" Y="0" Width="1530" Height="1260"/>
+    <AllowChildren>True</AllowChildren>
+    <AllowResize>True</AllowResize>
+    <ShowHeader>True</ShowHeader>
+    <ShowEnableButton>True</ShowEnableButton>
+    <Collapsed>False</Collapsed>
+    <Disabled>False</Disabled>
+    <SoloFrame Caption="Colores" ID="12">
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0</Font>
+     </Appearance>
+     <WindowState Visible="False" X="0" Y="445" Width="1130" Height="265"/>
+     <AllowChildren>True</AllowChildren>
+     <AllowResize>True</AllowResize>
+     <ShowHeader>True</ShowHeader>
+     <ShowEnableButton>True</ShowEnableButton>
+     <Mixing>False</Mixing>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <Button Caption="Blanco" ID="17" Icon="">
+      <WindowState Visible="False" X="25" Y="50" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294967295</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="35"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Rojo" ID="1" Icon="">
+      <WindowState Visible="False" X="245" Y="50" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294901760</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="24"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Verde" ID="20" Icon="">
+      <WindowState Visible="False" X="465" Y="50" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4278190080</ForegroundColor>
+       <BackgroundColor>4278255360</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="20"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Azul" ID="21" Icon="">
+      <WindowState Visible="False" X="685" Y="50" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4278212095</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="25"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Amarillo" ID="22" Icon="">
+      <WindowState Visible="False" X="905" Y="50" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294967040</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="26"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Ambar" ID="23" Icon="">
+      <WindowState Visible="False" X="25" Y="115" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294945280</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="39"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="UV" ID="24" Icon="">
+      <WindowState Visible="False" X="685" Y="115" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4289331455</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="47"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Celeste" ID="25" Icon="">
+      <WindowState Visible="False" X="465" Y="115" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4278255615</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="37"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Morado" ID="26" Icon="">
+      <WindowState Visible="False" X="245" Y="115" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4289353215</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="38"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Strobe" ID="29" Icon="">
+      <WindowState Visible="False" X="25" Y="200" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="36"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Rosado" ID="30" Icon="">
+      <WindowState Visible="False" X="905" Y="115" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294923775</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="45"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Negro" ID="2" Icon="">
+      <WindowState Visible="False" X="245" Y="200" Width="210" Height="60"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>4278190080</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,22,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="50"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+    </SoloFrame>
+    <SoloFrame Caption="Cabezas" ID="34">
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>MS Shell Dlg 2,16,-1,5,75,0,0,0,0,0</Font>
+     </Appearance>
+     <WindowState Visible="False" X="0" Y="745" Width="665" Height="345"/>
+     <AllowChildren>True</AllowChildren>
+     <AllowResize>True</AllowResize>
+     <ShowHeader>True</ShowHeader>
+     <ShowEnableButton>True</ShowEnableButton>
+     <Mixing>False</Mixing>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <XYPad Caption="XY Pad" ID="35" InvertedAppearance="0">
+      <WindowState Visible="False" X="40" Y="85" Width="255" Height="230"/>
+      <Appearance>
+       <FrameStyle>Sunken</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Fixture ID="5" Head="0">
+       <Axis ID="X" LowLimit="0" HighLimit="1" Reverse="False"/>
+       <Axis ID="Y" LowLimit="0" HighLimit="1" Reverse="False"/>
+      </Fixture>
+      <Window hMin="0" hMax="0" vMin="0" vMax="256"/>
+      <Pan Position="88"/>
+      <Tilt Position="217"/>
+     </XYPad>
+     <XYPad Caption="XY Pad" ID="36" InvertedAppearance="0">
+      <WindowState Visible="False" X="385" Y="85" Width="265" Height="240"/>
+      <Appearance>
+       <FrameStyle>Sunken</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>Default</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>Default</Font>
+      </Appearance>
+      <Fixture ID="5" Head="0">
+       <Axis ID="X" LowLimit="0" HighLimit="1" Reverse="False"/>
+       <Axis ID="Y" LowLimit="0" HighLimit="1" Reverse="False"/>
+      </Fixture>
+      <Window hMin="0" hMax="0" vMin="0" vMax="256"/>
+      <Pan Position="88"/>
+      <Tilt Position="217"/>
+     </XYPad>
+    </SoloFrame>
+    <SoloFrame Caption="" ID="7">
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <WindowState Visible="False" X="25" Y="55" Width="1470" Height="365"/>
+     <AllowChildren>True</AllowChildren>
+     <AllowResize>True</AllowResize>
+     <ShowHeader>True</ShowHeader>
+     <ShowEnableButton>True</ShowEnableButton>
+     <Mixing>False</Mixing>
+     <Collapsed>False</Collapsed>
+     <Disabled>False</Disabled>
+     <Button Caption="1- Bosque" ID="8" Icon="">
+      <WindowState Visible="False" X="30" Y="75" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4283825920</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="170"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="4-Fotos" ID="9" Icon="">
+      <WindowState Visible="False" X="820" Y="75" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294967295</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="173"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="2-Feliz" ID="10" Icon="">
+      <WindowState Visible="False" X="290" Y="75" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294945280</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="39"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="3-Mar" ID="11" Icon="">
+      <WindowState Visible="False" X="550" Y="75" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4278190207</ForegroundColor>
+       <BackgroundColor>4278233855</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="157"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="5-Música" ID="6" Icon="">
+      <WindowState Visible="False" X="1100" Y="75" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>Default</ForegroundColor>
+       <BackgroundColor>4294923775</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="173"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+     <Button Caption="Negro - Apagón" ID="13" Icon="">
+      <WindowState Visible="False" X="545" Y="215" Width="245" Height="115"/>
+      <Appearance>
+       <FrameStyle>None</FrameStyle>
+       <ForegroundColor>4294967295</ForegroundColor>
+       <BackgroundColor>4278190080</BackgroundColor>
+       <BackgroundImage>None</BackgroundImage>
+       <Font>MS Shell Dlg 2,24,-1,5,50,0,0,0,0,0</Font>
+      </Appearance>
+      <Function ID="50"/>
+      <Action>Toggle</Action>
+      <Intensity Adjust="False">100</Intensity>
+     </Button>
+    </SoloFrame>
+   </Frame>
+  </Frame>
+  <Properties>
+   <Size Width="1920" Height="1080"/>
+   <GrandMaster ChannelMode="Intensity" ValueMode="Reduce" SliderMode="Normal"/>
+  </Properties>
+ </VirtualConsole>
+ <SimpleDesk>
+  <Engine/>
+ </SimpleDesk>
+</Workspace>
