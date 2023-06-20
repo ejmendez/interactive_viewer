@@ -2,6 +2,17 @@ body {
     background  : #161211;
 }
 
+.hidden {
+      display: none;
+}
+
+.fullscreen-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .loading-container {
     display: flex;
     color      : green;

@@ -88,7 +88,7 @@ if __name__ == "__main__":
     loop = asyncio.new_event_loop()
     try:
         user = "qlcplus"
-        loop.create_task(listener_qlc(universe_index = 1, start_channel = 1, channels_count = 4))
+        loop.create_task(listener_qlc(universe_index = 1, start_channel = 71, channels_count = 4))
         loop.create_task(send_dmx_values_to_websocket(websocket_url = f"wss://interactiveviewer.glitch.me/?user={user}"))
         loop.run_forever()
     finally:

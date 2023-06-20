@@ -16,6 +16,14 @@ const connectingBox    = document.querySelector('#connecting-box');
 const connectingBar    = document.querySelector('#connecting-bar');
 const connectingText   = document.querySelector('#connecting-text');
 
+const images_array = ["bebe_1.webp", "bebe_2.webp", "bebe_3.jpeg", "bebe_4.webp", "bebe_5.jpg"];
+const music_array = ["birds.mp3", "grillo.mp3"];
+
+const imgElement = document.createElement('img');
+
+let random_image_number = 0;
+let random_music_number = 0;
+
 if('vibrate' in navigator) {
     canVibrate = true;
 }
@@ -70,12 +78,47 @@ function connectWebSocket() {
             document.body.style.backgroundColor = "rgb" + "(" + rgbX_array[0] + ", " + rgbX_array[1] + ", " + rgbX_array[2] + ")";
         }
 
+
+        if (effect == 60) {
+
+            let random_number = randomIntFromInterval(0, images_array.length - 1);
+
+            while (random_number === random_image_number) {
+              random_number = randomIntFromInterval(0, images_array.length - 1);
+            }
+
+            random_image_number = random_number;
+
+            let random_image = "./images/" + images_array[random_image_number];
+            imgElement.src       = random_image;
+            imgElement.className = 'fullscreen-image';
+
+            document.body.appendChild(imgElement);
+
+            document.body.style.backgroundColor = "rgb" + "(0,0,0)";
+        }
+        else if(effect != 61) {
+            imgElement.className = 'hidden';
+        }
+
         if (song_in_progress == 0) {
 
             let play_audio = 0
             let src        = ""
 
-            if (effect == 100) {
+            if (effect == 70) {
+                let random_number = randomIntFromInterval(0, music_array.length - 1);
+
+                while (random_number === random_music_number) {
+                  random_number = randomIntFromInterval(0, music_array.length - 1);
+                }
+
+                random_music_number = random_number;
+
+                src = "./music/" + music_array[random_music_number];
+                play_audio = 1
+            }
+            else if (effect == 100) {
                 src        = 'music/birds.mp3';
                 play_audio = 1
             }
@@ -85,11 +128,7 @@ function connectWebSocket() {
             }
 
             if (play_audio == 1) {
-                song_in_progress = 1
-
-                let audio = new Audio(src);
-                audio.addEventListener("ended", songFinishes);
-                audio.play();
+                play_music(src);
             }
         }
 
@@ -106,8 +145,17 @@ function connectWebSocket() {
             light = false
         }
     });
+}
 
+function play_music(src) {
+    song_in_progress = 1
+    let audio = new Audio(src);
+    audio.addEventListener("ended", songFinishes);
+    audio.play();
+}
 
+function songFinishes() {
+    song_in_progress = 0;
 }
 
 async function lockWakeState() {
