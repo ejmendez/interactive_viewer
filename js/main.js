@@ -108,21 +108,9 @@ function connectWebSocket() {
         let rgbX_array = event.data.split(",")
         let effect     = rgbX_array[3]
 
-        if(effect==2) {
-            add_text("Necesito luz");
-        }
-        else if(effect==3) {
-            add_text("Dame tu luz, apunta hacia m\u00ED");
-        }
-        else if(effect==4) {
-            add_text("Abraza a la persona del lado");
-        }
-        else if(effect==5) {
-            add_text("Gracias");
-        }
-        else {
-            remove_text();
-        }
+        console.log('rgbX_array ', rgbX_array)
+        console.log('effect ', effect)
+
 
         if (effect == 50) {
             const red   = randomIntFromInterval(0, 255)
@@ -191,6 +179,22 @@ function connectWebSocket() {
         else if (effect == 0 && light == true) {
             turnLight(false)
             light = false
+        }
+
+        if(effect==2) {
+            add_text("Necesito luz");
+        }
+        else if(effect==3) {
+            add_text("Dame tu luz, apunta hacia m\u00ED");
+        }
+        else if(effect==4) {
+            add_text("Abraza a la persona del lado");
+        }
+        else if(effect==5) {
+            add_text(rgbX_array[0]);
+        }
+        else {
+            remove_text();
         }
     });
 }

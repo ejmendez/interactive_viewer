@@ -8,7 +8,7 @@ body {
 
 .text_in_screen {
     font-family   : 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 10vw;
     font-weight: bold;
     text-align: center;
     position: fixed;
