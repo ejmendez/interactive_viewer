@@ -20,7 +20,7 @@ const images_array_1 = ["1.jpg", "2.jpg","3.jpg","4.jpg","5.jpg","6.jpeg","7.jpg
 const images_array_2 = ["bebe_1.webp", "bebe_2.webp","bebe_3.jpeg","bebe_4.webp","bebe_5.jpg"];
 
 const sounds_array_1 = ["birds.mp3", "grillo.mp3", "Campana.mp3"];
-const sounds_array_2 = ["Lluvia.mp3", "Trueno.mp3", "Llantos.mp3"];
+const sounds_array_2 = ["Matrimonio.mp3", "Campana.mp3"];
 
 const imgElement = document.createElement('img');
 
@@ -112,6 +112,20 @@ function connectWebSocket() {
         console.log('effect ', effect)
 
 
+
+        if(effect==2) {
+            add_text("Necesito luz");
+        }
+        else if(effect==3) {
+            add_text("Dame tu luz, apunta hacia m\u00ED");
+        }
+        else if(effect==4) {
+            add_text("Abraza a la persona del lado");
+        }
+        else if(effect==5) {
+            add_text(rgbX_array[0]);
+        }
+
         if (effect == 50) {
             const red   = randomIntFromInterval(0, 255)
             const green = randomIntFromInterval(0, 255)
@@ -181,21 +195,6 @@ function connectWebSocket() {
             light = false
         }
 
-        if(effect==2) {
-            add_text("Necesito luz");
-        }
-        else if(effect==3) {
-            add_text("Dame tu luz, apunta hacia m\u00ED");
-        }
-        else if(effect==4) {
-            add_text("Abraza a la persona del lado");
-        }
-        else if(effect==5) {
-            add_text(rgbX_array[0]);
-        }
-        else {
-            remove_text();
-        }
     });
 }
 
