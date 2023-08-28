@@ -19,8 +19,11 @@ const connectingText   = document.querySelector('#connecting-text');
 const images_array_1 = ["1.jpg", "2.jpg","3.jpg","4.jpg","5.jpg","6.jpeg","7.jpg","8.jpg"];
 const images_array_2 = ["bebe_1.webp", "bebe_2.webp","bebe_3.jpeg","bebe_4.webp","bebe_5.jpg"];
 
-const sounds_array_1 = ["birds.mp3", "grillo.mp3", "Campana.mp3"];
-const sounds_array_2 = ["Matrimonio.mp3", "Campana.mp3"];
+//const sounds_array_1 = ["birds.mp3", "grillo.mp3", "Campana.mp3"];
+//const sounds_array_2 = ["Matrimonio.mp3", "Campana.mp3"];
+
+const sounds_array_1 = ["Hospital.mp3"];
+const sounds_array_2 = ["Ramas_1.mp3", "Ramas_2.mp3"];
 
 const imgElement = document.createElement('img');
 
@@ -110,8 +113,6 @@ function connectWebSocket() {
 
         console.log('rgbX_array ', rgbX_array)
         console.log('effect ', effect)
-
-
 
         if(effect==2) {
             add_text("Necesito luz");
