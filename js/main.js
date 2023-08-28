@@ -19,9 +19,6 @@ const connectingText   = document.querySelector('#connecting-text');
 const images_array_1 = ["1.jpg", "2.jpg","3.jpg","4.jpg","5.jpg","6.jpeg","7.jpg","8.jpg"];
 const images_array_2 = ["bebe_1.webp", "bebe_2.webp","bebe_3.jpeg","bebe_4.webp","bebe_5.jpg"];
 
-//const sounds_array_1 = ["birds.mp3", "grillo.mp3", "Campana.mp3"];
-//const sounds_array_2 = ["Matrimonio.mp3", "Campana.mp3"];
-
 const sounds_array_1 = ["Hospital.mp3"];
 const sounds_array_2 = ["Ramas_1.mp3", "Ramas_2.mp3"];
 
@@ -49,10 +46,6 @@ let wakelock;
 
 function getRandomSound(sounds_array) {
   let random_number = randomIntFromInterval(0, sounds_array.length - 1);
-
-  while (random_number === random_music_number) {
-    random_number = randomIntFromInterval(0, sounds_array.length - 1);
-  }
 
   random_music_number = random_number;
 
@@ -156,14 +149,17 @@ function connectWebSocket() {
             imgElement.className = 'hidden';
         }
 
+        console.log('aca ', effect)
         if (song_in_progress == 0) {
 
             let play_audio = 0
             let src        = ""
 
             if (effect == 70) {
+                 console.log('effect ', effect)
                 play_audio = 1
                 src = getRandomSound(sounds_array_1)
+                 console.log('effect sale ', effect)
             }
             else if (effect == 80) {
                 play_audio = 1
@@ -327,6 +323,10 @@ function turnLight(mode) {
 }
 
 function randomIntFromInterval(min, max) { // min and max included
+    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+    if(max==min) {
+        return min;
+    }
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
